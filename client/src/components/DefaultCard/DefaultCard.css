@@ -1,0 +1,7 @@
+.default_card {
+    background: pink;
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
