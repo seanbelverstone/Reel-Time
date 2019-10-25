@@ -9,7 +9,7 @@ module.exports = {
   create: (request, response) => {
     db.User
       .create(request.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => response.json(dbModel))
       .catch(err => response.status(422).json(err));
   }
 };
