@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./NewUserButton.css";
+import "./ShareButton.css";
 
-class NewUserButton extends Component {
+class ShareButton extends Component {
 
     render () {
         return (
             <div>
                 <Button 
                     onClick={this.onSubmit}
-                    id="register-button">REGISTER</Button>
+                    id="share-button">SHARE</Button>
             </div>
         )
     }
 }
 
-export default NewUserButton;
+export default ShareButton;

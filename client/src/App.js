@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-// import Login from "./components/Login/Login";
-// import NewUserButton from "./components/NewUserButton/NewUserButton";
+import NewUserForm from "./components/NewUserForm";
+import GenericBtn from "./components/GenericBtn";
 import DefaultCard from "./components/DefaultCard/DefaultCard";
 
 class App extends Component {
@@ -21,6 +21,11 @@ class App extends Component {
         {/* <div className="Register-field">
           <NewUserButton/>
         </div>         */}
+
+        <NewUserForm />
+        <GenericBtn btnText="create reel" />
+        <GenericBtn btnText="view saved reel" />
+        <GenericBtn btnText="find new reel" />
 
       </div>
     );
