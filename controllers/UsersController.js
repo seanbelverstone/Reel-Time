@@ -10,7 +10,7 @@ module.exports = {
       response.json(users);
     });
   },
-  
+   
   create: (request, response) => {
     db.User
       .create(request.body)
