@@ -8,11 +8,12 @@ module.exports = (sequelize, DataTypes) => {
     recipeTitle: DataTypes.STRING,
     recipeIngredients: DataTypes.STRING,
     recipeMethod: DataTypes.STRING,
-    rating: DataTypes.BOOLEAN
+    rating: DataTypes.BOOLEAN,
+    user_id: DataTypes.INTEGER
   }, {});
-  SavedDate.associate = function(models) {
-    // associations can be defined here
-  };
+  // SavedDate.associate = function(models) {
+  //   SavedDate.belongsTo(models.User)
+  // };
   SavedDate.sync();
   return SavedDate;
 };
