@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     movieSynopsis: DataTypes.STRING,
     recipeTitle: DataTypes.STRING,
     recipeIngredients: DataTypes.STRING,
-    recipeMethod: DataTypes.STRING
+    recipeMethod: DataTypes.STRING,
+    rating: DataTypes.BOOLEAN
   }, {});
   SavedDate.associate = function(models) {
     // associations can be defined here
