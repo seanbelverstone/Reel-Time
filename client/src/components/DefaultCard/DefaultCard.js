@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./DefaultCard.css";
-import Login from "../Login/Login";
+import LoginForm from "../LoginForm/LoginForm";
 import NewUserButton from "../NewUserButton/NewUserButton";
 import { Card } from "reactstrap";
 
@@ -11,7 +11,7 @@ class DefaultCard extends Component {
         return (
             <div>
                 <Card className="default_card">
-                    <Login/>
+                    <LoginForm/>
                     <NewUserButton/>
                 </Card>
             </div>
