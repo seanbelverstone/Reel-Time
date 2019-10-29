@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./DeleteButton.css";
+import "./style.css";
 
 class DeleteButton extends Component {
 

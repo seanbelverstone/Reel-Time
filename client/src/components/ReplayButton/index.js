@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./ReplayButton.css";
+import "./style.css";
 
 class ReplayButton extends Component {
 
