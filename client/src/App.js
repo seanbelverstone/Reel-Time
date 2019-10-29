@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <div className="App">
 
-        <BackgroundVideo />
         <div className="Login-field">
           <DefaultCard/>
           {/* <Login/> */}
