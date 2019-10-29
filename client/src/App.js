@@ -1,24 +1,28 @@
 import React, { Component } from "react";
 import "./App.css";
-import NewUserForm from "./components/NewUserForm";
-import GenericBtn from "./components/GenericBtn";
-import DefaultCard from "./components/DefaultCard/DefaultCard";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LoginPage from "./pages/LoginPage";
+import NewUserPage from "./pages/NewUserPage";
+import DashboardPage from "./pages/DashboardPage";
+import SavedReelsPage from "./pages/SavedReelsPage";
+import NewReelPage from "./pages/NewReelPage";
+import SuccessReelPage from "./pages/SuccessReelPage";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
-        <div className="Login-field">
-          <DefaultCard/>
+      <Router>
+        <div>
+            <Switch>
+              <Route exact path="/" component={LoginPage} />
+              <Route exact path="/new-user" component={NewUserPage} />
+              <Route exact path="/dashboard" component={DashboardPage} />
+              <Route exact path="/saved-reels" component={SavedReelsPage} />
+              <Route exact path="/new-reel" component={NewReelPage} />
+              <Route exact path="/success-reel" component={SuccessReelPage} />
+            </Switch>
         </div>
-
-        <NewUserForm />
-        <GenericBtn btnText="create reel" />
-        <GenericBtn btnText="view saved reel" />
-        <GenericBtn btnText="find new reel" />
-
-      </div>
+      </Router>
     );
   }
 }
