@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./BackToDashButton.css";
+import "./style.css";
 
 class BackToDashButton extends Component {
 
