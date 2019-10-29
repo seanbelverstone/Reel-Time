@@ -1,33 +1,43 @@
-import React, { Component } from "react";
-import VideoCover from "react-video-cover";
+import React, { Component } from 'react';
+import Cover from 'react-video-cover';
+import ProjectorVideo from '../../images/projector_video.mp4';
 
+const style = {
+  width: '100vw',
+  height: '100vh',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  zIndex: -1,
+};
+class BackgroundVideo extends Component {
 
-export default class MinimalCoverExample extends Component {
-    render() {
-      const videoOptions = {
-        src: 'http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4',
-        ref: videoRef => {
-          this.videoRef = videoRef;
-        },
-        onClick: () => {
-          if (this.videoRef && this.videoRef.paused) {
-            this.videoRef.play();
-          } else if (this.videoRef) {
-            this.videoRef.pause();
-          }
-        },
-        title: 'click to play/pause',
-      };
-      return (
-        <div style={{
-          width: '300px',
-          height: '300px',
-          overflow: 'hidden',
-        }}>
-          <VideoCover
+  state = {
+    resizeNotifier: () => {},
+  }
+
+  render() {
+    const videoOptions = {
+      src: ProjectorVideo,
+      autoPlay: true,
+      muted: true,
+      loop: true,
+    };
+
+    return (
+        <div style={style} >
+          <Cover
             videoOptions={videoOptions}
+            remeasureOnWindowResize
+            getResizeNotifier={resizeNotifier => {
+              this.setState({
+                resizeNotifier,
+              });
+            }}
           />
         </div>
-      );
-    }
+    );
   }
+}
+
+export default BackgroundVideo;
