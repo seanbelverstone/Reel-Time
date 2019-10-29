@@ -1,8 +1,10 @@
-const router = require("express").Router();
-const userRoutes = require("./users");
-const dateRoutes = require("./savedDates");
+import userRoutes from "./users";
+import dateRoutes from "./savedDates";
+import authRoutes from "./auth";
 
-router.use("/users", userRoutes);
-router.use("/savedDates", dateRoutes);
 
-module.exports = router;
+export default function(app) {
+    userRoutes(app);
+    dateRoutes(app);
+    authRoutes(app);
+}
