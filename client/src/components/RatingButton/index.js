@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./BackToDashButton.css";
+import "./style.css";
 
-class BackToDashButton extends Component {
+class RatingButton extends Component {
 
     render () {
         return (
             <div>
                 <Button 
                     onClick={this.onSubmit}
-                    id="back-to-dash-button">BACK TO DASHBOARD</Button>
+                    id="rating-button">RATING</Button>
             </div>
         )
     }
 }
 
-export default BackToDashButton;
+export default RatingButton;

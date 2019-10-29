@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./ShareButton.css";
+import "./style.css";
 
-class ShareButton extends Component {
+class BackToDashButton extends Component {
 
     render () {
         return (
             <div>
                 <Button 
                     onClick={this.onSubmit}
-                    id="share-button">SHARE</Button>
+                    id="back-to-dash-button">BACK TO DASHBOARD</Button>
             </div>
         )
     }
 }
 
-export default ShareButton;
+export default BackToDashButton;

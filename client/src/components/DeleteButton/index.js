@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./ReplayButton.css";
+import "./style.css";
 
-class ReplayButton extends Component {
+class DeleteButton extends Component {
 
     render () {
         return (
             <div>
                 <Button 
                     onClick={this.onSubmit}
-                    id="replay-button">REPLAY</Button>
+                    id="delete-button">DELETE</Button>
             </div>
         )
     }
 }
 
-export default ReplayButton;
+export default DeleteButton;
