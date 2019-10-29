@@ -4,8 +4,13 @@ import axios from "axios";
 
 export default {
 
-    checkUser(username, password) {
-        console.log("Your details are: " + username, password);
+    checkUser: function(username, password) {
+        return axios.post("/api/auth", username, password)
+        .then(results => {
+            if (results.message === "Unable to Authorize") {
+                console.log(results);
+            }
+        });
     }
 
 }
