@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./style.css";
+import "./RatingButton.css";
 
 class RatingButton extends Component {
 
