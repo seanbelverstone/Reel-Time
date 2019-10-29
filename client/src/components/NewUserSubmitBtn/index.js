@@ -5,6 +5,7 @@ import "./style.css";
 const NewUserSubmitBtn = () => {
   return(
     <Button
+      id="new-user-submit-btn"
       type="submit"
     >
       Sign Up

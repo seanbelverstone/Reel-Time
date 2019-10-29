@@ -4,7 +4,9 @@ import "./style.css";
 
 const GenericBtn = ({btnText}) => {
   return(
-    <Button>
+    <Button
+      id="generic-btn"
+    >
       {btnText}
     </Button>
   );
