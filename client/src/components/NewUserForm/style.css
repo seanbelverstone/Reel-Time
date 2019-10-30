@@ -10,5 +10,13 @@
     position: absolute;
 }
 #signup_btn {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: #c3666b;
+    border: 0;
+    color: #ffffff;
     margin-top: 80px;
+}
+#signup_btn:hover{
+    background-color: #a4494e;;
 }
