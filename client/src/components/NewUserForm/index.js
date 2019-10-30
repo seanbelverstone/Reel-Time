@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { FormErrors } from '../FormErrors';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import "./style.css"
 
 class NewUserForm extends Component {
@@ -66,6 +67,20 @@ validateForm() {
 
 errorClass(error) {
     return(error.length === 0 ? '' : 'has-error');
+}
+
+
+
+onSubmit = event => {
+  event.preventDefault();
+
+  axios.post('/api/users', {
+      'username': this.state.username,
+      'password': this.state.password,
+      'email': this.state.email,
+  }).then((response) => {
+      console.log(response);  //t
+  });
 }
 
 render () {
