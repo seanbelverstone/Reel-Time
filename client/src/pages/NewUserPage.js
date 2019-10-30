@@ -9,7 +9,7 @@ import Title from "../components/TitleForEachPage";
 class NewUserPage extends Component {
 
     state = {
-        title : "New User Sign Up"
+        title : "Sign Up"
     }
 
     render() {
