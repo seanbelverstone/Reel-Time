@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.form-container {
+    padding-top: 125px;
+}
+
 .formErrors {
     color: red;
     font-size: 1em;
@@ -31,4 +35,12 @@ form {
 #new-user-text-link:hover {
     color: #404040;
     text-decoration: underline;
+}
+#login_btn{
+    width: 200px;
+    padding: 10px 20px;
+    margin-top: 60px;
+    background-color: #c3666b;
+    border: 0;
+    color: #ffffff;
 }
