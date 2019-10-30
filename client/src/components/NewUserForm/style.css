@@ -1,0 +1,14 @@
+.form-container {
+    position: relative;
+    padding-top: 125px;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+.panel.panel-default {
+    position: absolute;
+}
+#signup_btn {
+    margin-top: 80px;
+}

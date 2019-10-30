@@ -59,7 +59,7 @@ class LoginForm extends Component {
     render () {
         return (
             <div>
-                <Form>
+                <Form className="form-container">
                    
                     <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.username)}`}>
                         <Label for="username">Username</Label>

@@ -1,8 +1,8 @@
 .logo-container {
-    width: 150px;
+    position: absolute;
 }
 
 img {
-    width: 150px;
+    width: 125px;
     margin: 20px 0;
 }
