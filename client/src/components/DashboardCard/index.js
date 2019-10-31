@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./style.css";
 
-class NewUserCard extends Component {
+class DashboardCard extends Component {
   render() {
     return (
-      <div className="newUserCard">
+      <div className="dashboardCard">
         {this.props.children}
         <span className="copyright">© 2019 Reel Time</span>
       </div>
@@ -12,4 +12,4 @@ class NewUserCard extends Component {
   }
 }
 
-export default NewUserCard;
+export default DashboardCard;
