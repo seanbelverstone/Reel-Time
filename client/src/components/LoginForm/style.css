@@ -25,22 +25,30 @@ form {
 .button-container {
     text-align: center;
 }
-#new-user-text-link {
-    margin-top: 10px;
-    color: #404040;
-}
-#new-user-text-link:hover {
-    color: #404040;
-    text-decoration: underline;
-}
-#login_btn{
+
+#login_btn, #new-user{
     width: 200px;
     padding: 10px 20px;
-    margin-top: 60px;
+    margin: 10px auto 0 auto;
     background-color: #c3666b;
     border: 0;
     color: #ffffff;
 }
-#login_btn:hover{
+
+#login_btn:hover, #new-user:hover{
     background-color: #a4494e;;
+}
+
+#login_btn {
+    margin-right: 10px;
+}
+
+#new-user {
+    margin-left: 10px;
+}
+
+#authError {
+    color: #c3666b;
+    font-weight: 600;
+    font-style: italic;
 }
