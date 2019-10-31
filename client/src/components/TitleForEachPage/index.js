@@ -5,7 +5,7 @@ function Title(props) {
     
     return (
         <div className="title-text">
-            <p>{ props.title }</p>
+            { props.title }
         </div>
       );
 }

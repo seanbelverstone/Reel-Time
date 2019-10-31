@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./style.css";
 
@@ -34,6 +33,11 @@ class LoginForm extends Component {
             ));
     }
 
+    createUser = (event) => {
+        event.preventDefault();
+        window.location.pathname = "/new-user";
+    }
+
     render () {
         return (
             <div>
@@ -64,15 +68,17 @@ class LoginForm extends Component {
                     <div id="authError">
                         {this.state.authError}
                     </div> 
-                    <Button 
-                        onClick={this.onSubmit}
-                        id="login_btn"
-                        >LOG IN
-                    </Button>
                     <div className="button-container">
-                        <Link to="/new-user">
-                            <p id="new-user-text-link">Create New User</p>
-                        </Link>
+                        <Button 
+                            onClick={this.onSubmit}
+                            id="login_btn"
+                            >LOG IN
+                        </Button>
+                        <Button
+                            onClick={this.createUser}
+                            id="new-user"
+                            >CREATE NEW USER
+                        </Button>
                     </div>
                 </Form>
             </div>
