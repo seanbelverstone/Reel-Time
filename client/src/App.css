@@ -42,3 +42,6 @@
   font-weight: 700;
 }
 
+li {
+  list-style-type: none; 
+}
