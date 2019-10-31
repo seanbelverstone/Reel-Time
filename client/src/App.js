@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from "./pages/LoginPage";
 import NewUserPage from "./pages/NewUserPage";
 import DashboardPage from "./pages/DashboardPage";
-// import SavedReelsPage from "./pages/SavedReelsPage";
+import SavedReelsPage from "./pages/SavedReelsPage";
  import NewReelPage from "./pages/NewReelPage";
  import SuccessReelPage from "./pages/SuccessReelPage";
 
@@ -18,7 +18,8 @@ class App extends Component {
               <Route exact path="/new-user" component={NewUserPage} />
               <Route exact path="/dashboard" component={DashboardPage} />
               <Route exact path="/new-reel" component={NewReelPage} />
-              <Route exact path="/SuccessReelPage" component={SuccessReelPage} />
+              <Route exact path="/saved-reels" component={SavedReelsPage} />
+              <Route exact path="/success" component={SuccessReelPage} />
             </Switch>
         </div>
       </Router>
