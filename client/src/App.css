@@ -30,3 +30,7 @@
   padding-bottom: 30px;
   padding-top: 30px;
 }
+ul.buttons,
+ul.list-group {
+  list-style-type: none;
+}

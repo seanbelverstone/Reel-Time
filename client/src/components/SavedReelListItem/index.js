@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import ShareButton from "../ShareButton";
 import DeleteButton from "../DeleteButton";
 import ReplayButton from "../ReplayButton";
@@ -7,16 +8,15 @@ import RatingButton from "../RatingButton";
 // RecipeList renders a bootstrap list item
 function SavedReelListItem (props) {
     return (
-        <li className="">
+        <li>
             <div className="saved-content">
                 <p className="time-stamp"></p>
-                <img className="movie-image" src="" alt=""></img>
-                <img className="food-image" src="" alt=""></img>
+                <img className="movie-image" src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg" alt=""></img>
                 <ul className="buttons">
-                    <ShareButton />
-                    <DeleteButton />
-                    <ReplayButton />
-                    <RatingButton />
+                    <li><ShareButton /></li>
+                    <li><DeleteButton /></li>
+                    <li><ReplayButton /></li>
+                    <li><RatingButton /></li>
                 </ul>
             </div>
         </li>

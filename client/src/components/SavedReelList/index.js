@@ -1,4 +1,6 @@
 import React from "react";
+import "./style.css";
+
 
 // RecipeList renders a bootstrap list item
 function SavedReelList (props) {
