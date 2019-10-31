@@ -1,6 +1,6 @@
-const express = require("express");
-const path = require("path");
-const passport = require("passport");
+import express from "express";
+import path from "path";
+import passport from "passport";
 const PORT = process.env.PORT || 3001;
 const app = express();
 import routes from "./routes";

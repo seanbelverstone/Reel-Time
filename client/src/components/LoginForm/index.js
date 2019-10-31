@@ -21,7 +21,14 @@ class LoginForm extends Component {
 
     onSubmit = (event) => {
         event.preventDefault()
-        API.checkUser(this.state.username, this.state.password);
+        API.checkUser(this.state.username, this.state.password)
+        .then(results => {
+            // results.token
+            // store this to cookies
+            // in the ccatch, set the state to show a message "your username/ password etc etc
+            // using the auth key and bearer token (look on postman) 
+            // any time any other request is made, grab from teh cookie and pass that token as an auth header
+         }).catch(err => console.log("error:",err));
     }
 
     render () {
