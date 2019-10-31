@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import DefaultCard from "../components/DefaultCard";
 import Logo from "../components/Logo";
+import UsernameDisplay from "../components/UsernameDisplay";
+
 
 class NewReelPage extends Component {
     render () {
@@ -8,6 +10,7 @@ class NewReelPage extends Component {
             <div>
             <DefaultCard>
             <Logo />
+            <UsernameDisplay />
                 <div>
                     <div>
                         <img alt="alfjds"></img>
