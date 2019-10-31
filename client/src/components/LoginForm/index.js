@@ -8,7 +8,8 @@ class LoginForm extends Component {
 
     state = {
         username: "",
-        password: ""
+        password: "",
+        authError: ""
     }
 
     // Handles the change for state, so we can access the username and password entered by the client.
@@ -23,12 +24,13 @@ class LoginForm extends Component {
         event.preventDefault()
         API.checkUser(this.state.username, this.state.password)
         .then(results => {
-            // results.token
-            // store this to cookies
-            // in the ccatch, set the state to show a message "your username/ password etc etc
-            // using the auth key and bearer token (look on postman) 
-            // any time any other request is made, grab from teh cookie and pass that token as an auth header
-         }).catch(err => console.log("error:",err));
+            document.cookie = results.data.token;
+            // stores the token to cookies. By default, the cookie is deleted when the browser is closed
+            window.location.pathname = "/dashboard"; 
+            // changes the location to the dashboard
+         }).catch(err => this.setState(
+             {authError: "Your username or password is incorrect."}
+            ) );
     }
 
     render () {
@@ -56,7 +58,9 @@ class LoginForm extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-
+                    <div id="authError">
+                        {this.state.authError}
+                    </div> 
                     <Button 
                         onClick={this.onSubmit}
                         id="login_btn"

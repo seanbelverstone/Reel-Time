@@ -26,7 +26,7 @@ module.exports = {
                     email: user.email
                 };
 
-                // generate a signed son web token with the contents of user object and return it in the response
+                // generate a signed json web token with the contents of user object and return it in the response
                 const token = jwt.sign(sanitizedUser, 'your_jwt_secret');
                 response.json(
                     {
