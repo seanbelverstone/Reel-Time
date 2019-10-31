@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultCard from "../components/DefaultCard";
+import NewUserCard from "../components/NewUserCard";
 import Logo from "../components/Logo";
 import NewUserForm from "../components/NewUserForm";
 import BackgroundVideo from "../components/BackgroundVideo";
@@ -16,13 +16,13 @@ class NewUserPage extends Component {
         return (
             <div>
             <BackgroundVideo />
-            <DefaultCard>
+            <NewUserCard>
             <div className="page-header">
                 <Logo />
                 <Title title={this.state.title} />
             </div>
             <NewUserForm />
-            </DefaultCard>
+            </NewUserCard>
             </div>
 
         );
