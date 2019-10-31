@@ -1,12 +1,15 @@
-const router = require("express").Router();
 const SavedDatesController = require("../../controllers/SavedDatesController");
-
-router.route("/")
-    .post(SavedDatesController.create);
+import passport from "passport";
 
 
-router.route("/:id")
-    .get(SavedDatesController.get)
-    .delete(SavedDatesController.delete);
+export default function(app) {
 
-module.exports = router;
+    app.use(passport.authenticate("jwt", {session: false}));
+
+    app.route("/api/savedDates/")
+        .post(SavedDatesController.create);
+
+    app.route("/api/savedDates/:id")
+        .get(SavedDatesController.get)
+        .delete(SavedDatesController.delete);
+}

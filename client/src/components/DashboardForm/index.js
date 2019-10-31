@@ -69,10 +69,14 @@
 //                 <select required="required" id="movieGenre" value={this.state.movieGenre} onChange={this.handleUserInput}>
 //                   <option value="" selected="true" disabled>Select</option>
 //                   <option value="Comedy">Comedy</option>
+//                   <option value="Family">Family</option>
 //                   <option value="Action">Action</option>
 //                   <option value="Horror">Horror</option>
 //                   <option value="Fantasy">Fantasy</option>
 //                   <option value="Documentary">Documentary</option>
+//                   <option value="Animation">Animation</option>
+//                   <option value="Romance">Romance</option>
+//                   <option value="Thriller">Thriller</option>
 //                 </select>
 //             </FormGroup>
 //             <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.cuisineType)}`}>
@@ -86,6 +90,9 @@
 //                   <option value="Japanese">Japanese</option>
 //                   <option value="Korean">Korean</option>
 //                   <option value="Mexican">Mexican</option>
+//                   <option value="French">French</option>
+//                   <option value="British">British</option>
+//                   <option value="Caribbean">Caribbean</option>
 //                 </select>
 //             </FormGroup>
 //             <div className="panel panel-default">
@@ -178,6 +185,10 @@ class DashboardForm extends Component {
       { value: 'Action', label: 'Action' },
       { value: 'Horror', label: 'Horror' },
       { value: 'Fantasy', label: 'Fantasy' },
+      { value: 'Animation', label: 'Animation'},
+      { value: 'Family', label: 'Family'},
+      { value: 'Romance', label: 'Romance'},
+      { value: 'Thriller', label: 'Thriller'},
       { value: 'Documentary', label: 'Documentary' }
     ];
     var cuisineTypeOptions = [
@@ -187,7 +198,10 @@ class DashboardForm extends Component {
       { value: 'Italian', label: 'Italian' },
       { value: 'Japanese', label: 'Japanese' },
       { value: 'Korean', label: 'Korean' },
-      { value: 'Mexican', label: 'Mexican' }
+      { value: 'Mexican', label: 'Mexican' },
+      { value: 'French', label: 'French' },
+      { value: 'British', label: 'British' },
+      { value: 'Caribbean', label: 'Caribbean' }
     ];
     return(
       <div>
