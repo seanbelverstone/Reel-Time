@@ -7,6 +7,7 @@ class Logo extends React.Component {
         return (
             <div className="logo-container">
                 <img src={logo} alt="Reel Time Logo" />
+                <div className="spacer"></div>
             </div>
         )
     }
