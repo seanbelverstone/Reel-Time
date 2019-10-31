@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Input } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./style.css";
 
@@ -36,8 +37,10 @@ class LoginForm extends Component {
     render () {
         return (
             <div>
-                <Form>
-                    <FormGroup>
+                <Form className="form-container">
+                   
+                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.username)}`}>
+                        <Label for="username">Username</Label>
                         <Input
                             type="text"
                             name="username"
@@ -48,7 +51,10 @@ class LoginForm extends Component {
                         />
                     </FormGroup>
 
-                    <FormGroup>
+                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
+                        
+                        <Label for="password">Password</Label>
+                        
                         <Input
                             type="password"
                             name="password"
@@ -66,6 +72,11 @@ class LoginForm extends Component {
                         id="login_btn"
                         >LOG IN
                     </Button>
+                    <div className="button-container">
+                        <Link to="/new-user">
+                            <p id="new-user-text-link">Create New User</p>
+                        </Link>
+                    </div>
                 </Form>
             </div>
         )

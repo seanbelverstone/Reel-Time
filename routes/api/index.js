@@ -4,7 +4,7 @@ import authRoutes from "./auth";
 
 
 export default function(app) {
-    // userRoutes(app);
-    // dateRoutes(app);
+    userRoutes(app);
+    dateRoutes(app);
     authRoutes(app);
 }

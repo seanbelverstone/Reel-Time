@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "reactstrap";
-import "./ShareButton.css";
+import "./style.css";
 
 class ShareButton extends Component {
 
