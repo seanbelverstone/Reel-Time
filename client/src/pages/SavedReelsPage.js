@@ -22,6 +22,9 @@ class SavedReelPage extends Component {
               <Title title={this.state.title} />
             </div>
             {/* <LoginForm></LoginForm> */}
+            <div className="saved-page-container">
+                
+            </div>
             </DefaultCard>
         </div>
     );
