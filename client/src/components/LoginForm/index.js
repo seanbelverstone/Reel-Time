@@ -31,7 +31,7 @@ class LoginForm extends Component {
             // changes the location to the dashboard
          }).catch(err => this.setState(
              {authError: "Your username or password is incorrect."}
-            ) );
+            ));
     }
 
     render () {
@@ -39,7 +39,7 @@ class LoginForm extends Component {
             <div>
                 <Form className="form-container">
                    
-                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.username)}`}>
+                    <FormGroup className="form-group">
                         <Label for="username">Username</Label>
                         <Input
                             type="text"
@@ -50,11 +50,8 @@ class LoginForm extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-
-                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-                        
+                    <FormGroup>
                         <Label for="password">Password</Label>
-                        
                         <Input
                             type="password"
                             name="password"
