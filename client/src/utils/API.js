@@ -1,7 +1,9 @@
 // API calls below.
 import axios from "axios";
 
-var userToken = document.cookie.toString();
+var allCookies = document.cookie.split(";");
+var userToken = allCookies[0].split("=");
+var userTokenValue = userToken[1];
 
 export default {
 
@@ -14,7 +16,7 @@ export default {
     },
 
     getReels: function(id) {
-        return axios.post(`/api/savedDates/${id}`, {headers: {'Authorization': 'Bearer' + userToken}})
+        return axios.post(`/api/savedDates/${id}`, {headers: {'Authorization': 'Bearer' + userTokenValue}})
     }
 }
 
