@@ -24,7 +24,8 @@ class LoginForm extends Component {
         event.preventDefault()
         API.checkUser(this.state.username, this.state.password)
         .then(results => {
-            document.cookie = results.data.token;
+            document.cookie = `token = ${results.data.token}`;
+            document.cookie = `id = ${results.data.user.id}`;
             // stores the token to cookies. By default, the cookie is deleted when the browser is closed
             window.location.pathname = "/dashboard"; 
             // changes the location to the dashboard
