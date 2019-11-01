@@ -115,6 +115,7 @@ import Select from 'react-select';
 import { Button, Form, FormGroup, Label } from "reactstrap";
 import { Link } from "react-router-dom";
 import { FormErrors } from '../FormErrors';
+import API from "../../utils/API";
 import "./style.css"
 
 class DashboardForm extends Component {
@@ -179,6 +180,22 @@ class DashboardForm extends Component {
   // updateState(element) {
   //       this.setState({value: element});
   //     }
+
+
+  onSubmit = event => {
+    event.preventDefault();
+
+    API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
+      .then(results => {
+
+        // maybe some sort of response    
+
+    }).catch(err => {
+        console.log(err);
+    });
+  }
+
+
   render(){
     var movieGenreOptions = [
       { value: 'Comedy', label: 'Comedy' },
