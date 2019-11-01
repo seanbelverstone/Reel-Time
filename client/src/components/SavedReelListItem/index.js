@@ -18,7 +18,11 @@ function SavedReelListItem (props) {
                     <li><ShareButton /></li>
                     <li><DeleteButton /></li>
                 </ul>
-                <p className="recipe-link">Your Recipe: <a href="#">CLICKABLE LINK HERE</a></p>
+                <div className="saved-recipe">
+                    <p><span id="saved-recipe-head">Saved Recipe</span></p>
+                    <p><span id="saved-recipe"># Menu: </span>Food Title Here</p>
+                    <p><span id="saved-recipe"># Link: </span><a href="#">CLICKABLE LINK HERE</a></p>
+                </div>
             </div>
         </li>
     );

@@ -1,14 +1,13 @@
 .saved-content {
     margin-top: 30px;
-    height: 460px;
-    /* border: red 1px solid; */
+    height: 510px;
     padding: 15px;
     overflow-y: scroll;
 }
 
 .movie-image {
     width: 250px;
-    height: 350px;
+    height: 320px;
 }
 
 .time-stamp {
@@ -39,8 +38,22 @@ ul {
 
 .movie-title {
     font-weight: bolder;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 #synopsis {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#saved-recipe-head {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#saved-recipe {
+    font-style: italic;
     font-weight: bolder;
 }
