@@ -4,7 +4,7 @@ import "./style.css";
 function UsernameDisplay(props) {
     
     return (
-        <p className="username-text">Hi, username!{ props.username }</p>
+        <p className="username-text">Hi, { props.username }!</p>
     );
 }
 

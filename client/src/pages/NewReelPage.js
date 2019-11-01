@@ -4,12 +4,14 @@ import Logo from "../components/Logo";
 import NewReelList from "../components/NewReelList";
 import NewReelListItem from "../components/NewReelListItem";
 import Title from "../components/TitleForEachPage";
+import UsernameDisplay from "../components/UsernameDisplay";
 
 class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel"
+        title: "New Reel",
+        username: "username"
     }
     render () {
         return (
@@ -17,7 +19,10 @@ class NewReelPage extends Component {
             <NewReelCard>
             <div className="page-header">
                 <Logo />
-                <Title title={this.state.title} />
+                <p className="title-div">
+                    <Title title={this.state.title} />
+                    <UsernameDisplay username={this.state.username}/>
+                </p>
             </div>
             <div>
                 {/* {!this.state.movies.length ? ( */}
