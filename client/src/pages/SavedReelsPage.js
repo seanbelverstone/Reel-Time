@@ -5,6 +5,7 @@ import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
 import SavedReelList from "../components/SavedReelList";
 import SavedReelListItem from "../components/SavedReelListItem";
+import BackToDashButton from "../components/BackToDashButton";
 
 class SavedReelPage extends Component {
 
@@ -26,6 +27,9 @@ class SavedReelPage extends Component {
                 <SavedReelList>
                     <SavedReelListItem/>
                 </SavedReelList>
+            </div>
+            <div className="back-to-dashboard">
+                <BackToDashButton />
             </div>
             </DefaultCard>
         </div>

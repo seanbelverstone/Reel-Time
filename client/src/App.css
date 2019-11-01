@@ -30,12 +30,6 @@
   padding-top: 30px;
 }
 
-ul.buttons,
-ul.list-group {
-  list-style-type: none;
-  padding-bottom: 30px;
-}
-
 /* Login Page */
 .title-text, #loginSlogan {
   font-style: italic;
@@ -47,6 +41,17 @@ ul.list-group {
   font-weight: 700;
 }
 
+/* Saved Reel Page */
 li {
   list-style-type: none; 
+}
+
+ul.buttons,
+ul.list-group {
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+
+.back-to-dashboard {
+  text-align: center;
 }
