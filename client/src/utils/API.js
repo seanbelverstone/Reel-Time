@@ -19,13 +19,28 @@ export default {
         console.log("inside client/src/utils/API.js \n");  //deb
 
         // cred contained: "id" - userID, "token" - is the jwt assigned
-        console.log(cred);  //deb
+        // console.log(cred);  //deb
 
-        console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
+        // console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
+
+        console.log("userTokenValue is");  //deb
+        console.log(userTokenValue);  //deb
 
         return axios.get("/api/movieFood/", {
-            genreSelected, cuisineTypeSelected
-        }); 
+
+            // headers: {
+            //     "bearer": `${cred.token}`},
+            // genreSelected, cuisineTypeSelected}})
+
+            // headers: {
+            //     'Authorization': `Bearer ${userTokenValue}`}})
+
+            // headers: {
+            //     'Authorization': `Bearer ${cred.token}`}})
+
+            // OBVIOUSLY THIS SHOULD HAVE WORK!!!
+            headers: {
+                "bestBears": `${Berenstain-Bears}`}})
         
     },
 

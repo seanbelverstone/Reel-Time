@@ -52,12 +52,12 @@ class DashboardForm extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    let cookee = document.cookie;
+    var cookee = document.cookie;
 
     API.getMovieFood(cookee, this.state.movieGenre, this.state.cuisineType)
       .then(results => {
         
-        
+        document.cookie = cookee;
         window.location.pathname = "/new-reel";    
       })
       .catch(err => {
