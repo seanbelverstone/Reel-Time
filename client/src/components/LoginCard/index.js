@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./style.css";
 
-class DefaultCard extends Component {
+class LoginCard extends Component {
   render() {
     return (
-      <div className="default_card">
+      <div className="loginCard">
         {this.props.children}
         <span className="copyright">© 2019 Reel Time</span>
       </div>
@@ -12,4 +12,4 @@ class DefaultCard extends Component {
   }
 }
 
-export default DefaultCard;
+export default LoginCard;

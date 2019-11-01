@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultCard from "../components/DefaultCard";
+import LoginCard from "../components/LoginCard";
 import Logo from "../components/Logo";
 import LoginForm from "../components/LoginForm";
 import BackgroundVideo from "../components/BackgroundVideo";
@@ -17,7 +17,7 @@ class LoginPage extends Component {
     return (
         <div>
             <BackgroundVideo />
-            <DefaultCard>
+            <LoginCard>
             <div className="page-header">
               <Logo></Logo>
               <p>
@@ -27,7 +27,7 @@ class LoginPage extends Component {
             </div>
 
             <LoginForm></LoginForm>
-            </DefaultCard>
+            </LoginCard>
         </div>
     );
   }

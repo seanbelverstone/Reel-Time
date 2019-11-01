@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultCard from "../components/DefaultCard";
+import SavedReelsCard from "../components/SavedReelsCard";
 import Logo from "../components/Logo";
 import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
@@ -17,7 +17,7 @@ class SavedReelPage extends Component {
     return (
         <div>
             <BackgroundVideo />
-            <DefaultCard>
+            <SavedReelsCard>
             <div className="page-header">
               <Logo></Logo>
               <Title title={this.state.title} />
@@ -27,7 +27,7 @@ class SavedReelPage extends Component {
                     <SavedReelListItem/>
                 </SavedReelList>
             </div>
-            </DefaultCard>
+            </SavedReelsCard>
         </div>
     );
   }
