@@ -23,7 +23,6 @@ class DashboardForm extends Component {
   //   // });
   // }
 
-
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState(
@@ -32,13 +31,13 @@ class DashboardForm extends Component {
   }
 
 
-  validateForm() {
-      this.setState({
-        formValid: 
-        this.state.movieGenreValid &&
-        this.state.cuisineTypeValid
-      });
-  }
+  // validateForm() {
+  //     this.setState({
+  //       formValid: 
+  //       this.state.movieGenreValid &&
+  //       this.state.cuisineTypeValid
+  //     });
+  // }
 
   errorClass(error) {
       return(error.length === 0 ? '' : 'has-error');
@@ -53,10 +52,11 @@ class DashboardForm extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    console.log("in client/src/components/DashboardForm/index.js");  //deb
-    console.log(this.state.movieGenre + " " + this.state.cuisineType);  //deb
+    var allCookies = document.cookie.split(";");
+    var userId = allCookies[1].split("=");
+    var userIdValue = userId[1];
 
-    API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
+    API.getMovieFood(userIdValue, this.state.movieGenre, this.state.cuisineType)
       .then(results => {
         window.location.pathname = "/new-reel";    
       })

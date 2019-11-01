@@ -15,10 +15,16 @@ export default {
         return axios.post("/api/users/", {username, email, password})
     },
 
-    getMovieFood: function(genreSelected, cuisineTypeSelected) {
-        console.log("inside client/src/utils/API.js");  //deb
-        console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
-        return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
+    getMovieFood: function(cred, genreSelected, cuisineTypeSelected) {
+        console.log("inside client/src/utils/API.js \n");  //deb
+        console.log(cred);  //deb
+        console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
+        // return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
+        return axios.get("/api/movieFood/", {
+            genreSelected, cuisineTypeSelected,
+            headers: {'Authorization': `Bearer ${userTokenValue}`}
+        });   
+
     },
 
     getReels: function(id) {
