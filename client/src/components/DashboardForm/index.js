@@ -9,7 +9,7 @@ class DashboardForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valueMovie: '',
+      movieGenre: '',
       cuisineType: ''
     };
     this.handleChange = this.handleChange.bind(this);
@@ -23,12 +23,14 @@ class DashboardForm extends Component {
   //   // });
   // }
 
+
   handleChange = (event) => {
-    this.setState({
-      valueMovie: event.target.valueMovie,
-      cuisineType: event.target.cuisineType
-    });
+    const {name, value} = event.target;
+    this.setState(
+      {[name]: value}
+    )
   }
+
 
   validateForm() {
       this.setState({
@@ -52,7 +54,7 @@ class DashboardForm extends Component {
     event.preventDefault();
 
     console.log("in client/src/components/DashboardForm/index.js");  //deb
-    console.log(this.state.valueMovie + " " + this.state.cuisineType);  //deb
+    console.log(this.state.movieGenre + " " + this.state.cuisineType);  //deb
 
     // API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
     //   .then(results => {
@@ -73,7 +75,7 @@ class DashboardForm extends Component {
             <Label for="movieGenre">Choose a Movie Genre:*</Label>
             <select
               id="movieGenre"
-              value={this.state.valueMovie}
+              value={this.state.movieGenre}
               onChange={this.handleChange}
               name="movieGenre">
               <option value="selected">Select one</option>
