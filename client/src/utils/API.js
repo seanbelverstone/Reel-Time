@@ -16,7 +16,9 @@ export default {
     },
 
     getReels: function(id) {
-        return axios.post(`/api/savedDates/${id}`, {headers: {'Authorization': 'Bearer' + userTokenValue}})
+        return axios.get(`/api/savedDates/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
     }
 }
 
