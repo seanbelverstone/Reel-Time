@@ -1,59 +1,41 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { FormErrors } from '../FormErrors';
-import { Link } from "react-router-dom";
+import API from "../../utils/API";
 import "./style.css";
 
 
 class LoginForm extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-          username: '',
-          password: '',
-          formErrors: {username: '', password: ''},
-          usernameValid: false,
-          passwordValid: false,
-          formValid: false
-        }
+
+    state = {
+        username: "",
+        password: "",
+        authError: ""
     }
 
-    handleUserInput = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        this.setState({[name]: value},
-        () => { this.validateField(name, value) });
+    // Handles the change for state, so we can access the username and password entered by the client.
+    handleChange = (event) => {
+        const {name, value} = event.target;
+        this.setState(
+          {[name]: value}
+        )
+      }
+
+    onSubmit = (event) => {
+        event.preventDefault()
+        API.checkUser(this.state.username, this.state.password)
+        .then(results => {
+            document.cookie = results.data.token;
+            // stores the token to cookies. By default, the cookie is deleted when the browser is closed
+            window.location.pathname = "/dashboard"; 
+            // changes the location to the dashboard
+         }).catch(err => this.setState(
+             {authError: "Your username or password is incorrect."}
+            ));
     }
 
-    validateField(fieldName, value) {
-        let fieldValidationErrors = this.state.formErrors;
-        let usernameValid = this.state.usernameValid;
-        let passwordValid = this.state.passwordValid;
-    
-        switch(fieldName) {
-          case 'username':
-            usernameValid = value.match(/^[a-zA-Z]*$/);
-            fieldValidationErrors.username = usernameValid ? '' : ' can only be letters';
-            break;
-          case 'password':
-            passwordValid = value.length >= 6;
-            fieldValidationErrors.password = passwordValid ? '': ' is too short';
-            break;
-          default:
-            break;
-        }
-        this.setState({formErrors: fieldValidationErrors,
-                        usernameValid: usernameValid,
-                        passwordValid: passwordValid
-                      }, this.validateForm);
-    }
-
-    validateForm() {
-        this.setState({formValid: this.state.usernameValid && this.state.passwordValid});
-    }
-    
-    errorClass(error) {
-        return(error.length === 0 ? '' : 'has-error');
+    createUser = (event) => {
+        event.preventDefault();
+        window.location.pathname = "/new-user";
     }
 
     render () {
@@ -61,43 +43,42 @@ class LoginForm extends Component {
             <div>
                 <Form className="form-container">
                    
-                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.username)}`}>
+                    <FormGroup className="form-group">
                         <Label for="username">Username</Label>
                         <Input
                             type="text"
                             name="username"
                             id="username"
-                            placeholder=""
+                            placeholder="Username"
                             value={this.state.username}
-                            onChange={this.handleUserInput}
+                            onChange={this.handleChange}
                         />
                     </FormGroup>
-
-                    <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-                        
+                    <FormGroup>
                         <Label for="password">Password</Label>
-                        
                         <Input
                             type="password"
                             name="password"
                             id="password"
-                            placeholder=""
+                            placeholder="Password"
                             value={this.state.password}
-                            onChange={this.handleUserInput}
+                            onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <div className="panel panel-default">
-                        <FormErrors formErrors={this.state.formErrors} />
-                    </div>
+                    <div id="authError">
+                        {this.state.authError}
+                    </div> 
                     <div className="button-container">
-                        <Link to="/dashboard">
-                            <Button onClick={this.onSubmit} id="login_btn" disabled={!this.state.formValid}>LOG IN</Button>
-                        </Link>
-                    </div>
-                    <div className="button-container">
-                        <Link to="/new-user">
-                            <p id="new-user-text-link">Create New User</p>
-                        </Link>
+                        <Button 
+                            onClick={this.onSubmit}
+                            id="login_btn"
+                            >LOG IN
+                        </Button>
+                        <Button
+                            onClick={this.createUser}
+                            id="new-user"
+                            >CREATE NEW USER
+                        </Button>
                     </div>
                 </Form>
             </div>

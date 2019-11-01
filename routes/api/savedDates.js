@@ -1,12 +1,11 @@
-const router = require("express").Router();
 const SavedDatesController = require("../../controllers/SavedDatesController");
 
-router.route("/")
-    .post(SavedDatesController.create);
+export default function(app) {
 
+    app.route("/api/savedDates/")
+        .post(SavedDatesController.create);
 
-router.route("/:id")
-    .get(SavedDatesController.get)
-    .delete(SavedDatesController.delete);
-
-module.exports = router;
+    app.route("/api/savedDates/:id")
+        .get(SavedDatesController.get)
+        .delete(SavedDatesController.delete);
+}

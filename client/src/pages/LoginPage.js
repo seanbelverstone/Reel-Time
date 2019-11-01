@@ -4,11 +4,12 @@ import Logo from "../components/Logo";
 import LoginForm from "../components/LoginForm";
 import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
+import "../App.css";
 
 class LoginPage extends Component {
 
   state = {
-    title : "User Login"
+    title : "Have A Reel Time"
   }
 
   render() {
@@ -19,8 +20,12 @@ class LoginPage extends Component {
             <DefaultCard>
             <div className="page-header">
               <Logo></Logo>
-              <Title title={this.state.title} />
+              <p>
+                <Title title={this.state.title} id="loginTitle" />
+                <p id="loginSlogan">The app that makes your date</p>
+              </p>
             </div>
+
             <LoginForm></LoginForm>
             </DefaultCard>
         </div>

@@ -1,10 +1,12 @@
-const router = require("express").Router();
 const UsersController = require("../../controllers/UsersController");
 
-router.route("/:id")
-  .get(UsersController.get)
+export default function(app) {
 
-router.route("/")
-  .post(UsersController.create);
+  app.route("/api/users/:id")
+    .get(UsersController.get)
 
-module.exports = router;
+  app.route("/api/users/")
+    .post(UsersController.create);
+}
+
+// Move the create user route into the auth.js
