@@ -3,7 +3,6 @@ import "./style.css"
 import ShareButton from "../ShareButton";
 import DeleteButton from "../DeleteButton";
 import ReplayButton from "../ReplayButton";
-import RatingButton from "../RatingButton";
 
 // RecipeList renders a bootstrap list item
 function SavedReelListItem (props) {
@@ -17,6 +16,7 @@ function SavedReelListItem (props) {
                     <li><ShareButton /></li>
                     <li><DeleteButton /></li>
                 </ul>
+                <p className="recipe-link">Your Recipe: <a href="#">CLICKABLE LINK HERE</a></p>
             </div>
         </li>
     );
