@@ -15,17 +15,15 @@ export default {
         return axios.post("/api/users/", {username, email, password})
     },
 
-<<<<<<< HEAD
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
         console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
+    },
         
         // return axios.get("/api/auth", {genreSelected, cuisineTypeSelected}) 
-=======
     getReels: function(id) {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
->>>>>>> master
     }
 }
 
