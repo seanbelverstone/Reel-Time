@@ -1,4 +1,12 @@
+.saved-content {
+    margin-top: 30px;
+}
+
 .movie-image {
     width: 250px;
     height: 350px;
+}
+
+.time-stamp {
+    font-size: 17px;
 }
