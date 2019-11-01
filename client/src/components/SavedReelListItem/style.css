@@ -1,5 +1,8 @@
 .saved-content {
     margin-top: 30px;
+    height: 450px;
+    border: red 1px solid;
+    padding: 15px;
 }
 
 .movie-image {
@@ -15,4 +18,17 @@ ul {
     display: flex;
     justify-content: center;
     padding: 0;
+}
+
+.movie-synopsis {
+    overflow: scroll;
+    height: 200px;
+}
+
+.movie-title {
+    font-weight: bolder;
+}
+
+#synopsis {
+    font-weight: bolder;
 }
