@@ -11,13 +11,12 @@ function SavedReelListItem (props) {
         <li>
             <div className="saved-content">
                 <p className="time-stamp"></p>
-                <img className="movie-image" src="" alt=""></img>
-                <img className="food-image" src="" alt=""></img>
+                <img className="movie-image" src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg" alt=""></img>
                 <ul className="buttons">
-                    <li><ShareButton /></li>
-                    <li><DeleteButton /></li>
                     <li><ReplayButton /></li>
+                    <li><ShareButton /></li>
                     <li><RatingButton /></li>
+                    <li><DeleteButton /></li>
                 </ul>
             </div>
         </li>
