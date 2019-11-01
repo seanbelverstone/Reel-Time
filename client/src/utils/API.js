@@ -1,6 +1,9 @@
 // API calls below.
 import axios from "axios";
 
+var allCookies = document.cookie.split(";");
+var userToken = allCookies[0].split("=");
+var userTokenValue = userToken[1];
 
 export default {
 
@@ -12,10 +15,17 @@ export default {
         return axios.post("/api/users/", {username, email, password})
     },
 
+<<<<<<< HEAD
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
         console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
         
         // return axios.get("/api/auth", {genreSelected, cuisineTypeSelected}) 
+=======
+    getReels: function(id) {
+        return axios.get(`/api/savedDates/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
+>>>>>>> master
     }
 }
 

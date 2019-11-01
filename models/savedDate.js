@@ -6,14 +6,12 @@ module.exports = (sequelize, DataTypes) => {
     movieImage: DataTypes.STRING,
     movieSynopsis: DataTypes.STRING,
     recipeTitle: DataTypes.STRING,
-    recipeIngredients: DataTypes.STRING,
-    recipeMethod: DataTypes.STRING,
+    recipeImage: DataTypes.STRING,
+    recipeLink: DataTypes.STRING,
     rating: DataTypes.BOOLEAN,
     user_id: DataTypes.INTEGER
   }, {});
-  // SavedDate.associate = function(models) {
-  //   SavedDate.belongsTo(models.User)
-  // };
+
   SavedDate.sync();
   return SavedDate;
 };
