@@ -10,7 +10,7 @@ class DashboardForm extends Component {
     super(props);
     this.state = {
       valueMovie: '',
-      valueCuisine: ''
+      cuisineType: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -51,14 +51,17 @@ class DashboardForm extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
-      .then(results => {
+    console.log("in client/src/components/DashboardForm/index.js");  //deb
+    console.log(this.state.valueMovie + " " + this.state.cuisineType);  //deb
 
-        // maybe some sort of response    
+    // API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
+    //   .then(results => {
 
-    }).catch(err => {
-        console.log(err);
-    });
+    //     // maybe some sort of response    
+
+    // }).catch(err => {
+    //     console.log(err);
+    // });
   }
 
 
@@ -72,7 +75,7 @@ class DashboardForm extends Component {
               id="movieGenre"
               value={this.state.valueMovie}
               onChange={this.handleChange}
-              name={this.state.name}>
+              name="movieGenre">
               <option value="selected">Select one</option>
               <option value="Action">Action</option>
               <option value="Horror">Horror</option>
@@ -90,7 +93,7 @@ class DashboardForm extends Component {
               id="cuisineType"
               value={this.state.cuisineType}
               onChange={this.handleChange}
-              name={this.state.name}>
+              name="cuisineType">
               <option value="selected">Select one</option>
               <option value="America">American</option>
               <option value="Indian">Indian</option>

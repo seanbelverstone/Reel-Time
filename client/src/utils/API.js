@@ -16,6 +16,7 @@ export default {
     },
 
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
+        console.log("inside client/src/utils/API.js");  //deb
         console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
         return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
     },
