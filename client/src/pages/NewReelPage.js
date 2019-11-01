@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultCard from "../components/DefaultCard";
+import NewReelCard from "../components/NewReelCard";
 import Logo from "../components/Logo";
 import NewReelList from "../components/NewReelList";
 import NewReelListItem from "../components/NewReelListItem";
@@ -14,7 +14,7 @@ class NewReelPage extends Component {
     render () {
         return (
             <div>
-            <DefaultCard>
+            <NewReelCard>
             <div className="page-header">
                 <Logo />
                 <Title title={this.state.title} />
@@ -42,7 +42,7 @@ class NewReelPage extends Component {
                 {/* <div></div> */}
                 {/* )} */}
             </div>
-            </DefaultCard>
+            </NewReelCard>
             </div>
         );
     }

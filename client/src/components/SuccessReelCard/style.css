@@ -1,0 +1,24 @@
+.successReelCard{
+    background-color: #ffffff;
+    padding: 0 20px;
+    width: 90%;
+    max-width: 800px;
+    height: 550px;
+    margin: 50px auto 0 auto;
+    position: relative;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #404040;
+}
+
+@media only screen and (min-width: 450px) {
+    .default_card {
+       width:60%;
+    }
+}
