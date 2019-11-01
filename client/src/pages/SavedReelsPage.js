@@ -5,12 +5,14 @@ import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
 import SavedReelList from "../components/SavedReelList";
 import SavedReelListItem from "../components/SavedReelListItem";
+import UsernameDisplay from "../components/UsernameDisplay";
 import API from "../utils/API";
 
 class SavedReelPage extends Component {
 
   state = {
-    title : "Saved Reel"
+    title : "Saved Reel",
+    username: "username"
   }
 
   componentDidMount() {
@@ -35,8 +37,11 @@ class SavedReelPage extends Component {
             <BackgroundVideo />
             <SavedReelsCard>
             <div className="page-header">
-              <Logo></Logo>
-              <Title title={this.state.title} />
+                <Logo />
+                <p className="title-div">
+                    <Title title={this.state.title} />
+                    <UsernameDisplay username={this.state.username}/>
+                </p>
             </div>
             <div className="saved-page-container">
                 <SavedReelList>
