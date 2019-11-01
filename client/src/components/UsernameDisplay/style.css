@@ -1,5 +1,6 @@
 .username-text {
-  font-size: 45px;
-  color: #f38b8b;
-  display: flex;
+  font-size: 25px;
+  color: #999999;
+  text-align: right;
+
 }

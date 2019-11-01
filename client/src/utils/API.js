@@ -8,6 +8,10 @@ export default {
         return axios.post("/api/auth", {username, password}) 
     },
 
+    createUser: function(username, email, password) {
+        return axios.post("/api/users/", {username, email, password})
+    },
+
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
         console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
         
