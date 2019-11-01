@@ -9,8 +9,9 @@ export default {
     },
 
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
-        console.log(genreSelected + "    " + cuisineTypeSelected);  //t
-        return axios.get("/api/auth", {genreSelected, cuisineTypeSelected}) 
+        console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
+        
+        // return axios.get("/api/auth", {genreSelected, cuisineTypeSelected}) 
     }
 }
 
