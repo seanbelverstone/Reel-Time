@@ -17,14 +17,16 @@ export default {
 
     getMovieFood: function(cred, genreSelected, cuisineTypeSelected) {
         console.log("inside client/src/utils/API.js \n");  //deb
-        console.log(cred);  //deb
-        console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
-        // return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
-        return axios.get("/api/movieFood/", {
-            genreSelected, cuisineTypeSelected,
-            headers: {'Authorization': `Bearer ${userTokenValue}`}
-        });   
 
+        // cred contained: "id" - userID, "token" - is the jwt assigned
+        console.log(cred);  //deb
+
+        console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
+
+        return axios.get("/api/movieFood/", {
+            genreSelected, cuisineTypeSelected
+        }); 
+        
     },
 
     getReels: function(id) {

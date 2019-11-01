@@ -52,12 +52,12 @@ class DashboardForm extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    var allCookies = document.cookie.split(";");
-    var userId = allCookies[1].split("=");
-    var userIdValue = userId[1];
+    let cookee = document.cookie;
 
-    API.getMovieFood(userIdValue, this.state.movieGenre, this.state.cuisineType)
+    API.getMovieFood(cookee, this.state.movieGenre, this.state.cuisineType)
       .then(results => {
+        
+        
         window.location.pathname = "/new-reel";    
       })
       .catch(err => {
