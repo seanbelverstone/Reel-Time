@@ -58,10 +58,9 @@ class DashboardForm extends Component {
 
     API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
       .then(results => {
-
-        // maybe some sort of response    
-
-    }).catch(err => {
+        window.location.pathname = "/new-reel";    
+      })
+      .catch(err => {
         console.log(err);
     });
   }
@@ -102,9 +101,9 @@ class DashboardForm extends Component {
             </select>
           </FormGroup>
           <div className="button-container">
-            <Link to="/new-reel">
+            {/* <Link to="/new-reel"> */}
               <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
-            </Link>
+            {/* </Link> */}
           </div> 
         </Form>
       </div>
