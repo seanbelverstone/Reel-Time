@@ -1,0 +1,59 @@
+.saved-content {
+    margin-top: 30px;
+    height: 510px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+.movie-image {
+    width: 250px;
+    height: 320px;
+}
+
+.time-stamp {
+    font-size: 17px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.movie-synopsis {
+    overflow-y: scroll;
+    height: 180px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.movie-title {
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#synopsis {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#saved-recipe-head {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#saved-recipe {
+    font-style: italic;
+    font-weight: bolder;
+}

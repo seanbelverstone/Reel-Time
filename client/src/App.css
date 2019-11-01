@@ -28,7 +28,6 @@
   justify-content: space-evenly;
   align-items: center;
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 /* Login Page */
@@ -46,6 +45,17 @@
   font-weight: 700;
 }
 
+/* Saved Reel Page */
 li {
   list-style-type: none; 
+}
+
+ul.buttons,
+ul.list-group {
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+
+.back-to-dashboard {
+  text-align: center;
 }

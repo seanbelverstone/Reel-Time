@@ -30,6 +30,6 @@
     border-bottom: none;
   }
 
-  .list-group {
-      list-style-type: none;
+  ul.list-group {
+      list-style-type: none !important;
   }
