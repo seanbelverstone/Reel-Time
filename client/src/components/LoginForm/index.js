@@ -33,6 +33,8 @@ class LoginForm extends Component {
             ));
     }
 
+    
+
     createUser = (event) => {
         event.preventDefault();
         window.location.pathname = "/new-user";

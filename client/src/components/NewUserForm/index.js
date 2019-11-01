@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { FormErrors } from '../FormErrors';
+import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import "./style.css"
 
@@ -19,11 +20,26 @@ class NewUserForm extends Component {
     }
   }
 
+  
+
 handleUserInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({[name]: value},
     () => { this.validateField(name, value) });
+}
+
+onSubmit = (event) => {
+  event.preventDefault()
+  API.createUser(this.state.username, this.state.email, this.state.password)
+  .then(results => { 
+    console.log(results)
+      window.location.pathname = "/";
+      
+      
+  }).catch(err => this.setState(
+      {authError: "New user not created. Try again."}
+  ));
 }
 
 validateField(fieldName, value) {
@@ -114,7 +130,7 @@ render () {
             <FormErrors formErrors={this.state.formErrors} />
           </div>
           <div className="button-container">
-              <Link to="/dashboard">
+              <Link to="/">
                   <Button onClick={this.onSubmit} id="signup_btn" disabled={!this.state.formValid}>Sign Up</Button>
               </Link>
           </div>
