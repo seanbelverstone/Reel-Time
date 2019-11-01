@@ -5,12 +5,17 @@ import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
 import SavedReelList from "../components/SavedReelList";
 import SavedReelListItem from "../components/SavedReelListItem";
+import API from "../utils/API";
 
 class SavedReelPage extends Component {
 
   state = {
     title : "Saved Reel"
   }
+
+  componentDidMount() {
+    console.log("done")
+  } 
 
   render() {
 
@@ -34,3 +39,7 @@ class SavedReelPage extends Component {
 }
 
 export default SavedReelPage;
+
+/* SeanyB Psuedocode
+On component mount, do an API get all saved reels using the user's ID.
+*/
