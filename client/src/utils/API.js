@@ -17,9 +17,9 @@ export default {
 
     getMovieFood: function(genreSelected, cuisineTypeSelected) {
         console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
+        return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
     },
-        
-        // return axios.get("/api/auth", {genreSelected, cuisineTypeSelected}) 
+
     getReels: function(id) {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
