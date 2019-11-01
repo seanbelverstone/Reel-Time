@@ -10,3 +10,9 @@
 .time-stamp {
     font-size: 17px;
 }
+
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
