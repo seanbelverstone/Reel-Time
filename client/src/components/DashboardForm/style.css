@@ -9,3 +9,9 @@
 #create_reel_btn:hover{
     background-color: #a4494e;;
 }
+label {
+    margin-right: 50px;
+}
+select {
+    width: 200px;
+}

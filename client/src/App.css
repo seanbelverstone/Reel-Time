@@ -37,6 +37,10 @@
   text-align: right;
 }
 
+.title-div {
+  text-align:right;
+}
+
 #loginSlogan { 
   font-size: 20px;
   font-weight: 700;
