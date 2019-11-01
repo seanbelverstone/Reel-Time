@@ -23,8 +23,27 @@ export default {
 
         // console.log(`\n${genreSelected} - ${cuisineTypeSelected}`);  // debugging
 
-        console.log("userTokenValue is");  //deb
+        console.log("a");  //deb
+        console.log(cred);
+        console.log("b");  //deb
+        console.log(genreSelected);
+        console.log("c");  //deb
+        console.log(cuisineTypeSelected);  //deb
+        console.log("====");  //deb
+        // console.log(allCookies[1].token);  //deb
+        
+        console.log("1");  //deb
+        console.log(allCookies);
+        console.log("2");  //deb
+        console.log(userToken);
+        console.log("3");  //deb
         console.log(userTokenValue);  //deb
+        console.log("----");  //deb
+        console.log(allCookies[1].token);  //deb
+
+
+        
+
 
         return axios.get("/api/movieFood/", {
 
@@ -35,12 +54,13 @@ export default {
             // headers: {
             //     'Authorization': `Bearer ${userTokenValue}`}})
 
+            headers: {
+                'Authorization': `Bearer ${allCookies[1].token}`}})
+
             // headers: {
             //     'Authorization': `Bearer ${cred.token}`}})
+        
 
-            // OBVIOUSLY THIS SHOULD HAVE WORK!!!
-            headers: {
-                "bestBears": `${Berenstain-Bears}`}})
         
     },
 

@@ -13,6 +13,7 @@ class DashboardForm extends Component {
       cuisineType: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   // onSubmit= (e) => {
@@ -48,6 +49,10 @@ class DashboardForm extends Component {
   //       this.setState({value: element});
   //     }
 
+  componentDidMount() {
+    console.log("****componentDidMount of DashboardForm");
+
+  }
 
   onSubmit = event => {
     event.preventDefault();
