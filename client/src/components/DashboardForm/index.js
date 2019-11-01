@@ -31,7 +31,6 @@ class DashboardForm extends Component {
     )
   }
 
-
   // validateForm() {
   //     this.setState({
   //       formValid: 
@@ -49,10 +48,6 @@ class DashboardForm extends Component {
   //       this.setState({value: element});
   //     }
 
-  componentDidMount() {
-    console.log("****componentDidMount of DashboardForm");
-
-  }
 
   onSubmit = event => {
     event.preventDefault();
@@ -69,7 +64,6 @@ class DashboardForm extends Component {
         console.log(err);
     });
   }
-
 
   render(){
     return(
