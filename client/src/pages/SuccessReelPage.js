@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultCard from "../components/DefaultCard";
+import SuccessReelCard from "../components/SuccessReelCard";
 import Logo from "../components/Logo";
 import Title from "../components/TitleForEachPage";
 class SuccessReelPage extends Component {
@@ -9,7 +9,7 @@ class SuccessReelPage extends Component {
     render () {
         return (
             <div>
-            <DefaultCard>
+            <SuccessReelCard>
             <div className="page-header">
             <Logo></Logo>
               <Title title={this.state.title} />
@@ -19,7 +19,7 @@ class SuccessReelPage extends Component {
             <br></br>
             <div><img alt="goes here"></img></div>
             <div><p>Clink any link above and get your movie and recipe.</p></div>
-            </DefaultCard>
+            </SuccessReelCard>
             </div>
 
         );
