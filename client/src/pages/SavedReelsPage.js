@@ -22,6 +22,9 @@ class SavedReelPage extends Component {
     API.getReels(userIdValue)
       .then(results => {
         console.log(results.data)
+        // The array of items from the database is stored in this results.data.
+        // Please create an if statement, saying if no results, just maybe render a div saying "no saved reels :("
+        // If results returned, map through them and append them to the corresponding areas below.
       })
   } 
 
