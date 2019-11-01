@@ -1,6 +1,7 @@
 import userRoutes from "./users";
 import dateRoutes from "./savedDates";
 import authRoutes from "./auth";
+import movieFoodRoutes from "./movieFood";
 import passport from "passport";
 
 
@@ -11,5 +12,7 @@ export default function(app) {
     app.use(passport.authenticate("jwt", {session: false}));
     // Only then, can we start using the other routes
     dateRoutes(app);
+
+    movieFoodRoutes(app);
     
 }

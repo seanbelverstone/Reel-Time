@@ -15,6 +15,12 @@ export default {
         return axios.post("/api/users/", {username, email, password})
     },
 
+    getMovieFood: function(genreSelected, cuisineTypeSelected) {
+        console.log("inside client/src/utils/API.js");  //deb
+        console.log(genreSelected + "    " + cuisineTypeSelected);  // debugging
+        return axios.get("/api/movieFood/", {genreSelected, cuisineTypeSelected}) 
+    },
+
     getReels: function(id) {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
