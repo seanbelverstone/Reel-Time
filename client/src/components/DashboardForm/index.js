@@ -56,14 +56,14 @@ class DashboardForm extends Component {
     console.log("in client/src/components/DashboardForm/index.js");  //deb
     console.log(this.state.movieGenre + " " + this.state.cuisineType);  //deb
 
-    // API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
-    //   .then(results => {
+    API.getMovieFood(this.state.movieGenre, this.state.cuisineType)
+      .then(results => {
 
-    //     // maybe some sort of response    
+        // maybe some sort of response    
 
-    // }).catch(err => {
-    //     console.log(err);
-    // });
+    }).catch(err => {
+        console.log(err);
+    });
   }
 
 

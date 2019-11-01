@@ -2,8 +2,7 @@ const MovieFoodController = require("../../controllers/MovieFoodController");
 
 export default function(app) {
 
-    // app.route("/api/savedDates/")
-    //     .post(SavedDatesController.create);
+    console.log("in routes\api\movieFood.js");  //deb
 
     app.route("/api/movieFood/")
         .get(MovieFoodController.get);
