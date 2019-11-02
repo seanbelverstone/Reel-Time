@@ -39,15 +39,28 @@ class DashboardForm extends Component {
               value={this.state.valueMovie}
               onChange={this.handleChange}
               name={this.state.name}>
+                {/* Each genre has a specific ID. These will be reflected in the values of each option */}
               <option value="selected">Select one</option>
-              <option value="Action">Action</option>
-              <option value="Horror">Horror</option>
-              <option value="Fantasy">Fantasy</option>
-              <option value="Animation">Animation</option>
-              <option value="Family">Family</option>
-              <option value="Romance">Romance</option>
-              <option value="Thriller">Thriller</option>
-              <option value="Documentary">Documentary</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="animation">Animation</option>
+              <option value="comedy">Comedy</option>
+              <option value="crime">Crime</option>
+              <option value="documentary">Documentary</option>
+              <option value="drama">Drama</option>
+              <option value="family">Family</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="history">History</option>
+              <option value="horror">Horror</option>
+              <option value="music">Music</option>
+              <option value="mystery">Mystery</option>
+              <option value="romance">Romance</option>
+              <option value="science fiction">Romance</option>
+              <option value="tv movie">TV Movie</option>
+              <option value="thriller">Thriller</option>
+              <option value="war">War</option>
+              <option value="western">Western</option>
+
             </select>
           </FormGroup>
           <FormGroup className='form-group'>
