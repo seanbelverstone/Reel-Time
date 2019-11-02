@@ -9,11 +9,15 @@ import BackToDashButton from "../components/BackToDashButton";
 import UsernameDisplay from "../components/UsernameDisplay";
 import API from "../utils/API";
 
+const allCookies = document.cookie.split(";");
+const userNameToken = allCookies[14].split("=");
+const userNameValue = userNameToken[1];
+
 class SavedReelPage extends Component {
 
   state = {
     title : "Saved Reel",
-    username: "username"
+    username: userNameValue
   }
 
   componentDidMount() {
