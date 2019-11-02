@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function UsernameDisplay(props) {
-    
+function UsernameDisplay() {
     return (
-        <p className="username-text">Hi, { props.username }!</p>
+        <p className="username-text">Hi, username!</p>
     );
 }
 

@@ -3,6 +3,7 @@ import path from "path";
 import passport from "passport";
 const PORT = process.env.PORT || 3001;
 const app = express();
+require("dotenv").config();
 import routes from "./routes";
 import LocalStrategy from './strategies/local';
 import JWTStrategy from './strategies/jwt';

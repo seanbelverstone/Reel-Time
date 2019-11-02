@@ -18,6 +18,7 @@ class SavedReelPage extends Component {
 
   componentDidMount() {
     console.log("done")
+    // this grabs the cookies and splits it to grab just the user's ID value
     var allCookies = document.cookie.split(";");
     var userId = allCookies[1].split("=");
     var userIdValue = userId[1];
@@ -41,7 +42,7 @@ class SavedReelPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>
             <div className="saved-page-container">

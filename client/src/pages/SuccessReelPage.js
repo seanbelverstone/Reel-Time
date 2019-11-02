@@ -6,8 +6,7 @@ import UsernameDisplay from "../components/UsernameDisplay";
 
 class SuccessReelPage extends Component {
     state ={
-        title: "Success",
-        username: "username"
+        title: "Success"
     }
     render () {
         return (
@@ -17,7 +16,7 @@ class SuccessReelPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>
             <div><img alt="goes here"></img></div>

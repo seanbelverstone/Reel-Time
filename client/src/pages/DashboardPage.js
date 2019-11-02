@@ -7,8 +7,7 @@ import Title from "../components/TitleForEachPage";
 
 class DashboardPage extends Component {
     state = {
-        title : "Create Your Reel",
-        username: "username"
+        title : "Create Your Reel"
       }
 
     render () {
@@ -19,7 +18,7 @@ class DashboardPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>          
             <DashboardForm />
