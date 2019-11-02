@@ -1,11 +1,12 @@
-const SavedDatesController = require("../../controllers/SavedDatesController");
+// eslint-disable-next-line prettier/prettier
 
-export default function(app) {
+const SavedDatesController = require('../../controllers/SavedDatesController');
 
-    app.route("/api/savedDates/")
-        .post(SavedDatesController.create);
+export default function (app) {
+  app.route('/api/savedDates/')
+    .post(SavedDatesController.create);
 
-    app.route("/api/savedDates/:id")
-        .get(SavedDatesController.get)
-        .delete(SavedDatesController.delete);
+  app.route('/api/savedDates/:id')
+    .get(SavedDatesController.get)
+    .delete(SavedDatesController.delete);
 }

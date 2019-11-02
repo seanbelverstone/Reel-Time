@@ -1,11 +1,12 @@
-const db = require("../models");
+/* eslint-disable prettier/prettier */
+const db = require('../models');
 
 module.exports = {
   get: (request, response) => {
     db.SavedDate.findAll({
-        where: {
-            user_id: request.params.id
-        }
+      where: {
+        user_id: request.params.id,
+      },
     }).then((savedDates) => {
       response.json(savedDates);
     });
@@ -14,19 +15,19 @@ module.exports = {
   create: (request, response) => {
     db.SavedDate
       .create(request.body)
-      .then(dbModel => response.json(dbModel))
-      .catch(err => response.status(422).json(err));
+      .then((dbModel) => response.json(dbModel))
+      .catch((err) => response.status(422).json(err));
   },
 
   delete: (request, response) => {
-    const id = request.params.id
+    const { id } = request.params;
     db.SavedDate
       .destroy({
-        where: { id: id }
+        where: { id },
       })
-      .then(deletedDate => {
-          response.json(deletedDate)
+      .then((deletedDate) => {
+        response.json(deletedDate);
       })
-      .catch(err => response.status(422).json(err));
-  }
+      .catch((err) => response.status(422).json(err));
+  },
 };

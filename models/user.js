@@ -1,37 +1,39 @@
-"use strict";
-var bcrypt = require("bcrypt");
+/* eslint-disable func-names */
+/* eslint-disable no-param-reassign */
+
+const bcrypt = require('bcrypt');
 
 
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("User", {
+  const User = sequelize.define('User', {
 
     username: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
 
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
 
     email: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   }, {
     hooks: {
       beforeCreate: (user) => {
         const salt = bcrypt.genSaltSync();
         user.password = bcrypt.hashSync(user.password, salt);
-      }
-    }
+      },
+    },
   });
-  
-  User.prototype.validatePassword = function(password) {
+
+  User.prototype.validatePassword = function (password) {
     return bcrypt.compareSync(
       password,
-      this.password
+      this.password,
     );
   };
 
