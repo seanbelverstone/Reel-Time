@@ -18,7 +18,7 @@ function SavedReelListItem (props) {
                 <ul className="buttons">
                     <li><ReplayButton /></li>
                     <li><ShareButton /></li>
-                    <li><DeleteButt  on /></li>
+                    <li><DeleteButton /></li>
                 </ul>
                 <div className="saved-recipe">
                     <p><span id="saved-recipe-head">Saved Recipe</span></p>
