@@ -1,4 +1,6 @@
 import React from "react";
+import Moment from "react-moment";
+import "moment-timezone";
 import "./style.css"
 import ShareButton from "../ShareButton";
 import DeleteButton from "../DeleteButton";
@@ -16,7 +18,7 @@ function SavedReelListItem (props) {
                 <ul className="buttons">
                     <li><ReplayButton /></li>
                     <li><ShareButton /></li>
-                    <li><DeleteButton /></li>
+                    <li><DeleteButt  on /></li>
                 </ul>
                 <div className="saved-recipe">
                     <p><span id="saved-recipe-head">Saved Recipe</span></p>
