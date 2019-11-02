@@ -8,3 +8,21 @@
   margin-left: 30px;
   margin-right: 30px;
 }
+
+.copy-toast {
+  z-index: 99;
+  position: absolute;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 30px;
+}
+
+.toast.show {
+  opacity: 0.7;
+}
+
+.toast-header {
+  background: rgb(9, 82, 151);
+  color: white;
+  font-size: 15px;
+}
