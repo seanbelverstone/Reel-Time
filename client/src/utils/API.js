@@ -31,6 +31,10 @@ export default {
         return axios.get(`/api/recipe/${recipe}`, { 
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    getUserName: function() {
+        return axios.get("/api/user_info", {username})
     }
 }
 
