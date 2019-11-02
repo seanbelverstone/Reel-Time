@@ -1,31 +1,41 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label } from "reactstrap";
 import { Link } from "react-router-dom";
+import API from "../../utils/API";
 import "./style.css"
 
 class DashboardForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    
+  state = {
       valueMovie: '',
       valueCuisine: ''
     };
-    this.handleChange = this.handleChange.bind(this);
-  }
 
-  // onSubmit= (e) => {
-  //   e.preventDefault;
-  //   // this.props.onSubmit({
-  //   //   billerName: this.state.billerName,
-  //   //   billerDescription: this.state.billerDescription
-  //   // });
-  // }
 
   handleChange = (event) => {
-    this.setState({
-      valueMovie: event.target.valueMovie,
-      cuisineType: event.target.cuisineType
-    });
+    const {name, value} = event.target;
+    this.setState(
+      {[name]: value}
+    )
+  };
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    // this is the function for searching for a movie
+    this.movieSearch();
+    // this is the function for searching for a recipe
+    this.recipeSearch();
+
+  }
+
+  movieSearch = () => {
+    API.searchMovie(this.state.valueMovie)
+      .then(results => console.log(results.data));
+  }
+
+  recipeSearch = () => {
+    API.searchRecipe(this.state.valueCuisine)
+      .then(results => console.log(results.data));
   }
 
   render(){
@@ -38,28 +48,28 @@ class DashboardForm extends Component {
               id="movieGenre"
               value={this.state.valueMovie}
               onChange={this.handleChange}
-              name={this.state.name}>
+              name="valueMovie">
                 {/* Each genre has a specific ID. These will be reflected in the values of each option */}
               <option value="selected">Select one</option>
-              <option value="action">Action</option>
-              <option value="adventure">Adventure</option>
-              <option value="animation">Animation</option>
-              <option value="comedy">Comedy</option>
-              <option value="crime">Crime</option>
-              <option value="documentary">Documentary</option>
-              <option value="drama">Drama</option>
-              <option value="family">Family</option>
-              <option value="fantasy">Fantasy</option>
-              <option value="history">History</option>
-              <option value="horror">Horror</option>
-              <option value="music">Music</option>
-              <option value="mystery">Mystery</option>
-              <option value="romance">Romance</option>
-              <option value="science fiction">Romance</option>
-              <option value="tv movie">TV Movie</option>
-              <option value="thriller">Thriller</option>
-              <option value="war">War</option>
-              <option value="western">Western</option>
+              <option value="28">Action</option>
+              <option value="12">Adventure</option>
+              <option value="16">Animation</option>
+              <option value="35">Comedy</option>
+              <option value="80">Crime</option>
+              <option value="99">Documentary</option>
+              <option value="18">Drama</option>
+              <option value="10751">Family</option>
+              <option value="14">Fantasy</option>
+              <option value="36">History</option>
+              <option value="27">Horror</option>
+              <option value="10402">Music</option>
+              <option value="9648">Mystery</option>
+              <option value="10749">Romance</option>
+              <option value="878">Science Fiction</option>
+              <option value="10770">TV Movie</option>
+              <option value="53">Thriller</option>
+              <option value="10752">War</option>
+              <option value="37">Western</option>
 
             </select>
           </FormGroup>
@@ -67,9 +77,9 @@ class DashboardForm extends Component {
             <Label for="cuisineType">Choose a Cuisine Type:*</Label>
             <select
               id="cuisineType"
-              value={this.state.cuisineType}
+              value={this.state.valueCuisine}
               onChange={this.handleChange}
-              name={this.state.name}>
+              name="valueCuisine">
               <option value="selected">Select one</option>
               <option value="America">American</option>
               <option value="Indian">Indian</option>

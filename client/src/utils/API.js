@@ -19,6 +19,15 @@ export default {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    searchMovie: function(movie) {
+        console.log(process.env.THEMOVIEDB_API_KEY);
+        return axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.THEMOVIEDB_API_KEY}&language=en-US&include_adult=false&include_video=false&page=2&with_genres=${movie}`)
+    },
+
+    searchRecipe: function(recipe) {
+        return axios.get(`https://api.edamam.com/search?q=""&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_API_KEY}&cuisineType=${recipe}`)
     }
 }
 
