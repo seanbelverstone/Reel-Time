@@ -39,6 +39,7 @@
     "react-moment": "^0.9.6",
     "react-router-dom": "^5.1.2",
     "react-select": "^3.0.8",
+    "react-star-rating-component": "^1.4.1",
     "react-strap": "0.0.1",
     "react-video-cover": "^1.2.2",
     "reactstrap": "^8.1.1",
