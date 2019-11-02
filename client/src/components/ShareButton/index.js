@@ -14,9 +14,22 @@ class ShareButton extends Component {
 
 
     copyToast = () => {
-        this.setState(prevState => ({
-            copyToast: !prevState.copyToast
-        }))
+        this.setState(
+                prevState => ({
+                copyToast: !prevState.copyToast
+            }),
+            () => {
+                if(this.state.copyToast) {
+                    window.setTimeout(
+                        () => {
+                            console.log("worked");
+                            this.setState({copyToast: false})
+                        }, 
+                        3000
+                    );
+                }
+            }
+        )
     }
 
             
