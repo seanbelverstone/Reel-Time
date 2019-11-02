@@ -1,8 +1,9 @@
 .saved-content {
     margin-top: 30px;
-    height: 510px;
+    height: 520px;
     padding: 15px;
     overflow-y: scroll;
+    background: rgb(248, 237, 237);
 }
 
 .movie-image {
@@ -14,6 +15,12 @@
     font-size: 17px;
 }
 
+.star-rating {
+    text-align: center;
+    padding: 0;
+}
+
+
 ul {
     display: flex;
     justify-content: center;
@@ -22,7 +29,7 @@ ul {
 
 .movie-synopsis {
     overflow-y: scroll;
-    height: 180px;
+    height: 160px;
 }
 
 ::-webkit-scrollbar {
