@@ -2,9 +2,10 @@ const db = require("../models");
 
 module.exports = {
   get: (request, response) => {
+    console.log(request.user)
     db.SavedDate.findAll({
         where: {
-            user_id: request.params.id
+            user_id: request.user.id
         }
     }).then((savedDates) => {
       response.json(savedDates);
