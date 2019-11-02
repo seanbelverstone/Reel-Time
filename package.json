@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "reeltime",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "A date night generator",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
