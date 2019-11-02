@@ -7,6 +7,7 @@ import SavedReelList from "../components/SavedReelList";
 import SavedReelListItem from "../components/SavedReelListItem";
 import BackToDashButton from "../components/BackToDashButton";
 import UsernameDisplay from "../components/UsernameDisplay";
+import StarRating from "../components/StarRatingComponent";
 import API from "../utils/API";
 
 class SavedReelPage extends Component {
@@ -40,6 +41,7 @@ class SavedReelPage extends Component {
             <div className="page-header">
                 <Logo />
                 <p className="title-div">
+                    <StarRating />
                     <Title title={this.state.title} />
                     <UsernameDisplay username={this.state.username}/>
                 </p>
