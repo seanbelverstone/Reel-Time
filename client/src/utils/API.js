@@ -19,6 +19,10 @@ export default {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id) {
+        return axios.post("/api/savedDates", {movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id})
     }
 }
 

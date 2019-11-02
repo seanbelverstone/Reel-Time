@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     recipeTitle: DataTypes.STRING,
     recipeImage: DataTypes.STRING,
     recipeLink: DataTypes.STRING,
-    rating: DataTypes.BOOLEAN,
+    rating: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER
   }, {});
 
