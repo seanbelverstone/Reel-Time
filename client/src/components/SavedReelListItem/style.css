@@ -1,8 +1,9 @@
 .saved-content {
     margin-top: 30px;
-    height: 510px;
+    height: 520px;
     padding: 15px;
     overflow-y: scroll;
+    background: rgb(248, 237, 237);
 }
 
 .movie-image {
