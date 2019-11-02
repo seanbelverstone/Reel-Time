@@ -24,7 +24,7 @@ class DashboardForm extends Component {
     // this is the function for searching for a movie
     this.movieSearch();
     // this is the function for searching for a recipe
-    this.recipeSearch();
+    // this.recipeSearch();
 
   }
 
@@ -33,10 +33,10 @@ class DashboardForm extends Component {
       .then(results => console.log(results.data));
   }
 
-  recipeSearch = () => {
-    API.searchRecipe(this.state.valueCuisine)
-      .then(results => console.log(results.data));
-  }
+  // recipeSearch = () => {
+  //   API.searchRecipe(this.state.valueCuisine)
+  //     .then(results => console.log(results.data));
+  // }
 
   render(){
     return(
@@ -101,7 +101,7 @@ class DashboardForm extends Component {
               <option value="Nordic">Nordic</option>
               <option value="South American">South American</option>
               <option value="South East Asian">South East Asian</option>
-              
+
             </select>
           </FormGroup>
           <div className="button-container">

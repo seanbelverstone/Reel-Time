@@ -4,4 +4,5 @@ import apiRoutes from "./api";
 
 export default function(app) {
     apiRoutes(app);
+
 };

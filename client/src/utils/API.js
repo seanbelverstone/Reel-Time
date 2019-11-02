@@ -22,13 +22,16 @@ export default {
     },
 
     searchMovie: function(movie) {
-        console.log(process.env.THEMOVIEDB_API_KEY);
-        return axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.THEMOVIEDB_API_KEY}&language=en-US&include_adult=false&include_video=false&page=2&with_genres=${movie}`)
-    },
-
-    searchRecipe: function(recipe) {
-        return axios.get(`https://api.edamam.com/search?q=""&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_API_KEY}&cuisineType=${recipe}`)
+        return axios.get(`/api/search/${movie}`,  {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
     }
+
+    // searchRecipe: function(recipe) {
+    //     return axios.get(`https://api.edamam.com/search?q=""&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_API_KEY}&cuisineType=${recipe}`, { 
+    //         headers: {
+    //         'Authorization': `Bearer ${userTokenValue}`}})
+    // }
 }
 
 //on other routes apart from this one, grab from cookies and after data on the post, add {header: {auth: Bearer + ACCESS TOKEN}}
