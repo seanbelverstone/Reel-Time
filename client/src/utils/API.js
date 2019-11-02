@@ -19,6 +19,18 @@ export default {
         return axios.get(`/api/savedDates/${id}`, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    searchMovie: function(movie) {
+        return axios.get(`/api/movie/${movie}`,  {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    searchRecipe: function(recipe) {
+        return axios.get(`/api/recipe/${recipe}`, { 
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
     }
 }
 

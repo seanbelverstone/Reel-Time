@@ -9,4 +9,3 @@ export default function(app) {
     .post(UsersController.create);
 }
 
-// Move the create user route into the auth.js
