@@ -12,7 +12,8 @@ import API from "../utils/API";
 class SavedReelPage extends Component {
 
   state = {
-    title : "Saved Reel"
+    title : "Enjoy Your Saved Reel",
+    username: "username"
   }
 
   componentDidMount() {
