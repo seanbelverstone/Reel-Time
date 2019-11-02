@@ -9,10 +9,8 @@ module.exports = {
     },
 
     recipeApi: (request, response) => {
-        console.log(request.params.recipe);
         axios.get(`https://api.edamam.com/search?q=""&app_id={${process.env.EDAMAM_ID}}&app_key={${process.env.EDAMAM_API_KEY}}&cuisineType=${request.params.recipe}`)
         .then(results => {
-            console.log(results.data)
             response.json(results.data);
         });
     }
