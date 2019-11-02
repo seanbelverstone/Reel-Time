@@ -12,11 +12,13 @@ import API from "../utils/API";
 class SavedReelPage extends Component {
 
   state = {
-    title : "Saved Reel"
+    title : "Enjoy Your Saved Reel",
+    username: "username"
   }
 
   componentDidMount() {
     console.log("done")
+    // this grabs the cookies and splits it to grab just the user's ID value
     var allCookies = document.cookie.split(";");
     var userId = allCookies[1].split("=");
     var userIdValue = userId[1];

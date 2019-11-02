@@ -21,8 +21,21 @@ export default {
                 'Authorization': `Bearer ${userTokenValue}`}})
     },
 
+
     saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id) {
         return axios.post("/api/savedDates", {movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id})
+
+    searchMovie: function(movie) {
+        return axios.get(`/api/movie/${movie}`,  {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
+    },
+
+    searchRecipe: function(recipe) {
+        return axios.get(`/api/recipe/${recipe}`, { 
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
+
     }
 }
 
