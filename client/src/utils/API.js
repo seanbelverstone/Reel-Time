@@ -26,6 +26,7 @@ export default {
         return axios.post("/api/savedDates", {movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id})},
     
     
+        
     searchMovie: function(movie) {
         return axios.get(`/api/movie/${movie}`,  {
             headers: {
