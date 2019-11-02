@@ -10,15 +10,10 @@ import UsernameDisplay from "../components/UsernameDisplay";
 import StarRating from "../components/StarRatingComponent";
 import API from "../utils/API";
 
-const allCookies = document.cookie.split(";");
-const userNameToken = allCookies[14].split("=");
-const userNameValue = userNameToken[1];
-
 class SavedReelPage extends Component {
 
   state = {
-    title : "Saved Reel",
-    username: userNameValue
+    title : "Saved Reel"
   }
 
   componentDidMount() {
@@ -47,7 +42,7 @@ class SavedReelPage extends Component {
                 <p className="title-div">
                     <StarRating />
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>
             <div className="saved-page-container">
