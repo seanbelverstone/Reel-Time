@@ -5,8 +5,9 @@ import "./style.css";
 // const userNameToken = allCookies[14].split("=");
 // const userNameValue = userNameToken[1];
 // const allCookies = document.cookie.split(";");
-// const userNameToken = allCookies[13].split("=");
+// const userNameToken = allCookies[2].split("=");
 // const userNameValue = userNameToken[1];
+// console.log(userNameValue);
 
 function UsernameDisplay() {
     return (

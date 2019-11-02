@@ -24,7 +24,7 @@ class DashboardForm extends Component {
     // this is the function for searching for a movie
     this.movieSearch();
     // this is the function for searching for a recipe
-    // this.recipeSearch();
+    this.recipeSearch();
 
   }
 
@@ -33,10 +33,10 @@ class DashboardForm extends Component {
       .then(results => console.log(results.data));
   }
 
-  // recipeSearch = () => {
-  //   API.searchRecipe(this.state.valueCuisine)
-  //     .then(results => console.log(results.data));
-  // }
+  recipeSearch = () => {
+    API.searchRecipe(this.state.valueCuisine)
+      .then(results => console.log(results.data));
+  }
 
   render(){
     return(
@@ -82,25 +82,25 @@ class DashboardForm extends Component {
               name="valueCuisine">
 
               <option value="selected">Select one</option>
-              <option value="American">American</option>
-              <option value="Asian">Asian</option>
-              <option value="British">British</option>
-              <option value="Caribbean">Caribbean</option>
-              <option value="Central Europe">Central Europe</option>
-              <option value="Chinese">Chinese</option>
-              <option value="Eastern Europe">Eastern Europe</option>
-              <option value="French">French</option>
-              <option value="French">French</option>
-              <option value="Indian">Indian</option>
-              <option value="Italian">Italian</option>
-              <option value="Japanese">Japanese</option>
-              <option value="Kosher">Kosher</option>
-              <option value="Mediterranean">Mediterranean</option>
-              <option value="Mexican">Mexican</option>
-              <option value="Middle Eastern">Middle Eastern</option>
-              <option value="Nordic">Nordic</option>
-              <option value="South American">South American</option>
-              <option value="South East Asian">South East Asian</option>
+              <option value="american">American</option>
+              <option value="asian">Asian</option>
+              <option value="british">British</option>
+              <option value="caribbean">Caribbean</option>
+              <option value="central-europe">Central Europe</option>
+              <option value="chinese">Chinese</option>
+              <option value="eastern-europe">Eastern Europe</option>
+              <option value="french">French</option>
+              <option value="french">French</option>
+              <option value="indian">Indian</option>
+              <option value="italian">Italian</option>
+              <option value="japanese">Japanese</option>
+              <option value="kosher">Kosher</option>
+              <option value="mediterranean">Mediterranean</option>
+              <option value="mexican">Mexican</option>
+              <option value="middle-eastern">Middle Eastern</option>
+              <option value="nordic">Nordic</option>
+              <option value="south-american">South American</option>
+              <option value="south-east-asian">South East Asian</option>
 
             </select>
           </FormGroup>
