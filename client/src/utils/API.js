@@ -28,7 +28,6 @@ export default {
     },
 
     searchRecipe: function(recipe) {
-        console.log(recipe)
         return axios.get(`/api/recipe/${recipe}`, { 
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
