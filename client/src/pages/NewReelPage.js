@@ -6,12 +6,16 @@ import NewReelListItem from "../components/NewReelListItem";
 import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
 
+const allCookies = document.cookie.split(";");
+const userNameToken = allCookies[14].split("=");
+const userNameValue = userNameToken[1];
+
 class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
         title: "New Reel",
-        username: "username"
+        username: userNameValue
     }
     render () {
         return (
