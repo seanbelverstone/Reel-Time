@@ -5,14 +5,9 @@ import DashboardForm from "../components/DashboardForm";
 import UsernameDisplay from "../components/UsernameDisplay";
 import Title from "../components/TitleForEachPage";
 
-const allCookies = document.cookie.split(";");
-const userNameToken = allCookies[14].split("=");
-const userNameValue = userNameToken[1];
-
 class DashboardPage extends Component {
     state = {
-        title : "Create Your Reel",
-        username: userNameValue
+        title : "Create Your Reel"
       }
 
     render () {
@@ -23,7 +18,7 @@ class DashboardPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>          
             <DashboardForm />

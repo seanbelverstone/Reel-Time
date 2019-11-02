@@ -5,14 +5,9 @@ import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
 import { Button } from "reactstrap";
 
-const allCookies = document.cookie.split(";");
-const userNameToken = allCookies[14].split("=");
-const userNameValue = userNameToken[1];
-
 class SuccessReelPage extends Component {
     state ={
-        title: "Success",
-        username: userNameValue
+        title: "Success"
     }
     render () {
         return (
@@ -22,7 +17,7 @@ class SuccessReelPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>
             <div><img alt="goes here"></img></div>
