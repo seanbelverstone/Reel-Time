@@ -10,8 +10,7 @@ class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel",
-        username: "username"
+        title: "New Reel"
     }
     render () {
         return (
@@ -21,7 +20,7 @@ class NewReelPage extends Component {
                 <Logo />
                 <p className="title-div">
                     <Title title={this.state.title} />
-                    <UsernameDisplay username={this.state.username}/>
+                    <UsernameDisplay />
                 </p>
             </div>
             <div>
