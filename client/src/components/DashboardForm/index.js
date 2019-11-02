@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./style.css"
 
+var movieResults;
+var recipeResults;
+
 class DashboardForm extends Component {
     
   state = {
@@ -30,12 +33,33 @@ class DashboardForm extends Component {
 
   movieSearch = () => {
     API.searchMovie(this.state.valueMovie)
-      .then(results => console.log(results.data));
+      .then(results => {
+
+        movieResults = results.data.results;
+
+        // generates a random number
+        var randomNumber = Math.floor(Math.random() * 9) +1;
+
+        // grabs a result in a random position, parses it into a string then adds it to local storage.
+        // Local storage can only accept strings
+        var movieString = JSON.stringify(movieResults[randomNumber]);
+        localStorage.setItem("movie", movieString);
+      });
   }
 
   recipeSearch = () => {
     API.searchRecipe(this.state.valueCuisine)
-      .then(results => console.log(results.data));
+      .then(results => {
+
+        recipeResults = results.data.hits;
+
+        var randomNumber = Math.floor(Math.random() * 9) +1;
+
+        // grabs a result in a random position, parses it into a string then adds it to local storage.
+        // Local storage can only accept strings
+        var recipeString = JSON.stringify(recipeResults[randomNumber]);
+        localStorage.setItem("recipe", recipeString);
+      });
   }
 
   render(){
@@ -89,7 +113,6 @@ class DashboardForm extends Component {
               <option value="central-europe">Central Europe</option>
               <option value="chinese">Chinese</option>
               <option value="eastern-europe">Eastern Europe</option>
-              <option value="french">French</option>
               <option value="french">French</option>
               <option value="indian">Indian</option>
               <option value="italian">Italian</option>
