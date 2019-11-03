@@ -1,13 +1,19 @@
-.movie-headers {
-    width: 50%;
-    margin-bottom: 20px;
+.list-group-item {
+    margin-top: 30px;
+    padding: 15px;
 }
-.movie-headers span {
-    font-weight: bold;
+
+.movie-data {
+    margin-bottom: 15px;
 }
-.movie-headers p {
-    margin:0;
+
+.recipe-data,
+.movie-data {
+    position: abolute;
+    display: flex;
 }
+
+
 .movie-buttons {
     width: 50%;
 }
@@ -31,5 +37,13 @@
 }
 .movie-image {
     float: left;
-    margin: 0 40px 10px 0;
+    margin: 0 40px 0 0;
+    width: 230px;       
+    height: 260px;
+}
+
+.recipe-image {
+    float: left;
+    margin: 0 40px 0 0;
+    width: 230px;
 }
