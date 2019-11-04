@@ -19,7 +19,7 @@ class NewReelListItem extends Component {
     <li>
       <div className="new-reel-content">
         <div className="movie-data">
-          <h4 className="movie-pick">REEL PICK</h4>
+          <h4 className="movie-pick"># REEL PICK</h4>
           <img className="movie-image" src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg" alt={title} />
           {/* <img className="movie-image" src={newReelMovieImg} alt={title} /> */}
           <p className="movie-title"><span>Title: Black Panther</span>{title}</p>
@@ -31,7 +31,7 @@ class NewReelListItem extends Component {
         </div>
 
         <div className="recipe-data">
-          <h4 className="food-pick">YUM PICK</h4>
+          <h4 className="food-pick"># YUM PICK</h4>
           <img className="recipe-image" src="https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2018/07/Cheap-family-meals-Recipes-under-%C2%A31-per-head-920x605.jpg" alt={recipeTitle} />
           {/* <img className="recipe-image" src={newReelRecipeImg} alt={recipeTitle} /> */}
           <p className="recipe-title"><span>Title: </span>{recipeTitle}</p>
