@@ -5,7 +5,7 @@
 
 .new-reel-content {
     margin-top: 30px;
-    height: 520px;
+    height: 535px;
     padding: 15px;
     overflow-y: scroll;
     background: rgb(248, 237, 237);
@@ -40,7 +40,25 @@
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
+.movie-buttons {
+    width: 50%;
+}
 
+.movie-data span,
+.recipe-data span {
+    font-weight: bold;
+}
+
+.recipe-image {
+    float: left;
+    margin: 0 40px 0 0;
+    width: 230px;
+}
+
+.recipe-link a {
+    color: rgb(209, 94, 94);
+    font-weight: bolder;
+}
 
 /* .recipe-data,
 .movie-data,
@@ -50,9 +68,6 @@
 } */
 
 
-.movie-buttons {
-    width: 50%;
-}
 /* .view-link {
     float: right;
     color: #ffffff;
@@ -69,13 +84,3 @@
     color: #ffffff;
 } */
 
-.movie-data span {
-    font-weight: bold;
-}
-
-
-.recipe-image {
-    float: left;
-    margin: 0 40px 0 0;
-    width: 230px;
-}
