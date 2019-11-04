@@ -8,7 +8,8 @@
 }
 
 .recipe-data,
-.movie-data {
+.movie-data,
+.movie-data p {
     position: abolute;
     display: flex;
 }
