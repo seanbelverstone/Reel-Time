@@ -12,7 +12,7 @@ class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel"
+        title: "New Reel Combo"
     }
     render () {
         return (
