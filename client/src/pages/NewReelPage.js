@@ -28,28 +28,38 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
-        // getting user-id from cookie       
-        let aPoint = document.cookie.search("}; id") + 5;
-        let zPoint = document.cookie.search("; username=");
-        const uID  = document.cookie.substring(aPoint, zPoint);
+        // getting user-id from cookie
+        let strDC  = JSON.stringify(document.cookie)       
+        let aPoint = strDC.search("; id=") + 5;
+        let zPoint = strDC.search("; username=");
+        const uID  = strDC.substring(aPoint, zPoint);
 
+        // gathering movie data in localstorage
+        const moviestr = localStorage.getItem("movie");
+        const movieObj = JSON.parse(moviestr);
 
         // gathering saved food-data in localstorage
         const foodStr  = localStorage.getItem("recipe");
-        const foodObj = JSON.parse(foodStr);
+        const foodObj  = JSON.parse(foodStr);
 
-        console.log("8888888888888888");
-
-        let reelObj = { recipeTitle: foodObj.recipe.label, 
+        let reelObj = { movieTitle: movieObj.title,
+                        movieImage: movieObj.poster_path,
+                        movieSynopsis: movieObj.overview,
+                        recipeTitle: foodObj.recipe.label, 
                         recipeImage: foodObj.recipe.image,
                         recipeLink: foodObj.recipe.shareAs,
                         rating: null,
                         user_id: uID
         };
-        console.log(reelObj);
 
-        console.log("8888888888888888 cookie is");
-        console.log(document.cookie);
+        API.checkUser(reelObj)
+            .then(abc => {
+                // atm, no post-stored process
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        
     }
 
     componentWillMount = () => {
