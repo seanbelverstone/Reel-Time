@@ -6,18 +6,37 @@ import apple from "../../images/apple-tv-logo.png";
 import amazon from "../../images/amazon-tv-logo.png";
 
 class StreamingService extends Component {
+  // const {recipeLink} = this.props;
+  
+  handleClickNetflix = () => {
+    window.open('https://www.netflix.com/login','_blank');
+    window.open('http://yahoo.com','_blank');
+  }
+  handleClickHulu = () => {
+    window.open('https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F','_blank');
+    window.open('http://yahoo.com','_blank');
+  }
+  handleClickApple = () => {
+    window.open('https://www.apple.com/tv/','_blank');
+    window.open('http://yahoo.com','_blank');
+  }
+  handleClickAmazon = () => {
+    window.open('https://www.amazon.com/Prime-Movies/b?ie=UTF8&node=7613704011','_blank');
+    window.open('http://yahoo.com','_blank');
+  }
+  
 
   render() {
     return (
       <div className="streaming-buttons">
-        <p className="streaming-text">Clicking on the buttons will open 2 new tabs. One to the player you selected and one to the recipe above. Keep it Reel and see you next time!</p>
-        <a href="https://www.netflix.com"><img className="netflix" src={netflix} alt="netflix"></img></a>
+        <p className="streaming-text">Congrats! This Reel was added to your Saved Reels collection!<br></br>Clicking on the buttons will open one tab to the movie player and one to the recipe above.</p>
+        <button onClick={this.handleClickNetflix}><img className="netflix" src={netflix} alt="netflix"></img></button>
 
-        <a href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"><img className="hulu" src={hulu} alt="hulu"></img></a>
+        <button onClick={this.handleClickHulu}><img className="hulu" src={hulu} alt="hulu"></img></button>
         
-        <a href="https://www.apple.com/tv/"><img className="apple" src={apple} alt="appletv"></img></a>  
+        <button onClick={this.handleClickApple}><img className="apple" src={apple} alt="appletv"></img></button>  
         
-        <a href="https://www.amazon.com/Prime-TV-Shows/b?ie=UTF8&amp;node=7613705011"><img className="amazon" src={amazon} alt="netflix"></img></a>  
+        <button onClick={this.handleClickAmazon}><img className="amazon" src={amazon} alt="amazon"></img></button>  
       </div>
     )
   }
