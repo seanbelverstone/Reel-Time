@@ -8,9 +8,15 @@ import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
 import StreamingService from "../components/StreamingService";
+import { Button } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDice } from '@fortawesome/free-solid-svg-icons'
+import API from "../utils/API";
 
 var movie;
 var recipe;
+var movieResults;
+var recipeResults;
 
 class NewReelPage extends Component {
     // state = {
@@ -32,14 +38,65 @@ class NewReelPage extends Component {
     }
 
     getReel = () => {
+        // Grabs the previously stored results from local storage
         var currentMovie = localStorage.getItem("movie");
         var currentRecipe = localStorage.getItem("recipe");
 
+        // Parses it from a string into a once again useable JSON and assigns it to a global variable
         movie = JSON.parse(currentMovie);
         recipe = JSON.parse(currentRecipe);
-
-        console.log(movie, recipe);
     }
+
+    // This function is similar to the one on Dashboard form, however it reloads the page instead of navigating to the next one
+    reReel = () => {
+        this.movieSearch().then(() => {
+          this.recipeSearch().then(() => {
+            document.location.reload();
+          })
+        })
+    }
+
+    movieSearch = () => {
+        // Grabs the genreId from cookies and plugs it into the API call
+        var movieCookie = document.cookie.split(";");
+        var movieSplit = movieCookie[3].split("=");
+        var movieValue = movieSplit[1];
+
+        return API.searchMovie(movieValue)
+          .then(results => {
+    
+            movieResults = results.data.results;
+    
+            // generates a random number
+            var randomNumber = Math.floor(Math.random() * 9) +1;
+    
+            // grabs a result in a random position, parses it into a string then adds it to local storage.
+            // This overwrites previous storage
+            var movieString = JSON.stringify(movieResults[randomNumber]);
+            localStorage.setItem("movie", movieString);
+          });
+      }
+
+
+      recipeSearch = () => {
+        var cuisineCookie = document.cookie.split(";");
+        var cuisineSplit = cuisineCookie[4].split("=");
+        var cuisineValue = cuisineSplit[1];
+
+        return API.searchRecipe(cuisineValue)
+          .then(results => {
+    
+            recipeResults = results.data.hits;
+    
+            var randomNumber = Math.floor(Math.random() * 9) +1;
+    
+            // grabs a result in a random position, parses it into a string then adds it to local storage.
+            // Local storage can only accept strings
+            var recipeString = JSON.stringify(recipeResults[randomNumber]);
+            localStorage.setItem("recipe", recipeString);
+          });
+      }
+
     
     render () {
 
@@ -86,6 +143,11 @@ class NewReelPage extends Component {
 
             <div className="button-section">
                 <BackToDashButton/>
+                
+                <Button onClick={this.reReel} id="reReel">RE-REEL
+                    <FontAwesomeIcon id="dice" icon={faDice} size={"4x"} />
+                </Button>
+
                 <SaveAndWatchButton onClick={this.handleButtonClick}/>
             </div>
 
