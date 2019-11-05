@@ -29,18 +29,22 @@ class NewReelPage extends Component {
         this.setState({isButtonClicked: true});
 
         // gathering save food/movie in localstorage
-        const tempA  = localStorage.getItem("recipe");
-        const tempAA = tempA.split(";");
-        // const tempA = sessionStorage.getItem("recipe");
-        
-        // const tempB = localStorage.getItem("movie");
 
-        console.log("8888888888888888A");
-        console.log(typeof tempAA);
-        console.log(tempAA);
+        const foodStr  = localStorage.getItem("recipe");
+        const foodObj = JSON.parse(foodStr);
 
-        // console.log("8888888888888888B");
-        // console.log(tempB);
+        console.log("8888888888888888");
+
+        let reelObj = { recipeTitle: foodObj.recipe.label, 
+                        recipeImage: foodObj.recipe.image,
+                        recipeLink: foodObj.recipe.shareAs,
+                        rating: null,
+                        user_id: "d0Boy"
+        };
+        console.log(reelObj);
+
+        console.log("8888888888888888 cookie is");
+        console.log(document.cookie);
     }
 
     componentWillMount = () => {
