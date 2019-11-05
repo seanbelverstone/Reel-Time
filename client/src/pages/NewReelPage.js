@@ -8,6 +8,7 @@ import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
 import StreamingService from "../components/StreamingService";
+import { Button } from "reactstrap";
 
 var movie;
 var recipe;
@@ -66,6 +67,7 @@ class NewReelPage extends Component {
 
             <div className="button-section">
                 <BackToDashButton/>
+                <Button />
                 <SaveAndWatchButton/>
             </div>
 
