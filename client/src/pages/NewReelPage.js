@@ -27,6 +27,20 @@ class NewReelPage extends Component {
     
     handleButtonClick() {
         this.setState({isButtonClicked: true});
+
+        // gathering save food/movie in localstorage
+        const tempA  = localStorage.getItem("recipe");
+        const tempAA = tempA.split(";");
+        // const tempA = sessionStorage.getItem("recipe");
+        
+        // const tempB = localStorage.getItem("movie");
+
+        console.log("8888888888888888A");
+        console.log(typeof tempAA);
+        console.log(tempAA);
+
+        // console.log("8888888888888888B");
+        // console.log(tempB);
     }
 
     componentWillMount = () => {
