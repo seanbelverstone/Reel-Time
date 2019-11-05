@@ -9,6 +9,8 @@ import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
 import StreamingService from "../components/StreamingService";
 import { Button } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDice } from '@fortawesome/free-solid-svg-icons'
 import API from "../utils/API";
 
 var movie;
@@ -26,15 +28,16 @@ class NewReelPage extends Component {
     }
 
     getReel = () => {
+        // Grabs the previously stored results from local storage
         var currentMovie = localStorage.getItem("movie");
         var currentRecipe = localStorage.getItem("recipe");
 
+        // Parses it from a string into a once again useable JSON and assigns it to a global variable
         movie = JSON.parse(currentMovie);
         recipe = JSON.parse(currentRecipe);
-
-        console.log(movie, recipe);
     }
 
+    // This function is similar to the one on Dashboard form, however it reloads the page instead of navigating to the next one
     reReel = () => {
         this.movieSearch().then(() => {
           this.recipeSearch().then(() => {
@@ -44,6 +47,7 @@ class NewReelPage extends Component {
     }
 
     movieSearch = () => {
+        // Grabs the genreId from cookies and plugs it into the API call
         var movieCookie = document.cookie.split(";");
         var movieSplit = movieCookie[3].split("=");
         var movieValue = movieSplit[1];
@@ -57,7 +61,7 @@ class NewReelPage extends Component {
             var randomNumber = Math.floor(Math.random() * 9) +1;
     
             // grabs a result in a random position, parses it into a string then adds it to local storage.
-            // Local storage can only accept strings
+            // This overwrites previous storage
             var movieString = JSON.stringify(movieResults[randomNumber]);
             localStorage.setItem("movie", movieString);
           });
@@ -68,8 +72,6 @@ class NewReelPage extends Component {
         var cuisineCookie = document.cookie.split(";");
         var cuisineSplit = cuisineCookie[4].split("=");
         var cuisineValue = cuisineSplit[1];
-
-        console.log(cuisineValue);
 
         return API.searchRecipe(cuisineValue)
           .then(results => {
@@ -121,7 +123,9 @@ class NewReelPage extends Component {
 
             <div className="button-section">
                 <BackToDashButton/>
-                <Button onClick={this.reReel}/>
+                <Button onClick={this.reReel} id="reReel">RE-REEL
+                    <FontAwesomeIcon id="dice" icon={faDice} />
+                </Button>
                 <SaveAndWatchButton/>
             </div>
 
