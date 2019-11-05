@@ -57,8 +57,6 @@ class NewReelPage extends Component {
                     recipeLink={recipe.recipe.url}
                     recipeSource={recipe.recipe.source}
                     />
-                     );
-                })}
                 </NewReelList>
             </div>
 
