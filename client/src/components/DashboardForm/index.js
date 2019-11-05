@@ -133,9 +133,7 @@ class DashboardForm extends Component {
             </select>
           </FormGroup>
           <div className="button-container">
-            <Link to="/new-reel">
-              <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
-            </Link>
+            <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
           </div> 
         </Form>
       </div>
