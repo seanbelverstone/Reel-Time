@@ -34,9 +34,11 @@ class DashboardForm extends Component {
         window.location.pathname = '/new-reel'
       });
     });
-    
+  }
 
-    
+  goToSaved = (event) => {
+    event.preventDefault();
+    window.location.pathname = '/saved-reels'
   }
 
   movieSearch = () => {
@@ -136,6 +138,7 @@ class DashboardForm extends Component {
             </select>
           </FormGroup>
           <div className="button-container">
+            <Button onClick={this.goToSaved} id="saved_reels_btn">My Saved Reels</Button>
             <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
           </div> 
         </Form>

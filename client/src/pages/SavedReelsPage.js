@@ -12,7 +12,7 @@ import API from "../utils/API";
 class SavedReelPage extends Component {
 
   state = {
-    title : "Enjoy Your Saved Reel",
+    title : "Your Saved Reels",
     username: "username"
   }
 

@@ -1,7 +1,7 @@
 #create_reel_btn {
     width: 200px;
     padding: 10px 20px;
-    margin-top: 60px;
+    margin: 20px 10px;
     background-color: #c3666b;
     border: 0;
     color: #ffffff;
@@ -14,4 +14,19 @@ label {
 }
 select {
     width: 200px;
+}
+#saved_reels_btn {
+    width: 200px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background-color: #c3666b;
+    border: 0;
+    color: #ffffff;
+}
+#saved_reels_btn:hover {
+    background-color: #a4494e;;
+}
+.button-container {
+    display: block;
+    margin: 0 auto;
 }
