@@ -6,23 +6,23 @@ import apple from "../../images/apple-tv-logo.png";
 import amazon from "../../images/amazon-tv-logo.png";
 
 class StreamingService extends Component {
-  // const {recipeLink} = this.props;
+
   
   handleClickNetflix = () => {
     window.open('https://www.netflix.com/login','_blank');
-    window.open('http://yahoo.com','_blank');
+    window.open(this.props.recipeLink,'_blank');
   }
   handleClickHulu = () => {
     window.open('https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F','_blank');
-    window.open('http://yahoo.com','_blank');
+    window.open(this.props.recipeLink,'_blank');
   }
   handleClickApple = () => {
     window.open('https://www.apple.com/tv/','_blank');
-    window.open('http://yahoo.com','_blank');
+    window.open(this.props.recipeLink,'_blank');
   }
   handleClickAmazon = () => {
     window.open('https://www.amazon.com/Prime-Movies/b?ie=UTF8&node=7613704011','_blank');
-    window.open('http://yahoo.com','_blank');
+    window.open(this.props.recipeLink,'_blank');
   }
   
 

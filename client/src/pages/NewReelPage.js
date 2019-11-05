@@ -102,7 +102,7 @@ class NewReelPage extends Component {
         if (!isButtonClicked) {
             buttonDiv = "";
         } else {
-            buttonDiv = <StreamingService />
+            buttonDiv = <StreamingService recipeLink={recipe.recipe.url}/>
         }
 
         return (
@@ -142,8 +142,7 @@ class NewReelPage extends Component {
 
                 <Button onClick={this.reReel} id="reReel">RE-REEL</Button>
 
-                <SaveAndWatchButton 
-                    recipeLink={recipe.recipe.url}
+                <SaveAndWatchButton
                     onClick={this.handleButtonClick}/>
             </div>
 
