@@ -10,15 +10,13 @@ class StreamingService extends Component {
   render() {
     return (
       <div className="streaming-buttons">
-        {/* <button className="netflix"><img src={netflix}></img></button> */}
+        <a href="https://www.netflix.com"><img className="netflix" src={netflix}></img></a>
 
-        <a href="https://www.netflix.com/Login"><img className="netflix" src={netflix}></img></a>
-
-        <button className="hulu"><img src={hulu}></img></button>
-
-        <button className="apple-tv"><img src={apple}></img></button>   
+        <a href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"><img className="hulu" src={hulu}></img></a>
         
-        <button className="amazon-prime"><img src={amazon}></img></button> 
+        <a href="https://www.apple.com/tv/"><img className="apple" src={apple}></img></a>  
+        
+        <a href="https://www.amazon.com/Prime-TV-Shows/b?ie=UTF8&node=7613705011"><img className="amazon" src={amazon}></img></a>  
       </div>
     )
   }
