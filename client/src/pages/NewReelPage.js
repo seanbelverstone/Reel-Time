@@ -124,7 +124,7 @@ class NewReelPage extends Component {
             <div className="button-section">
                 <BackToDashButton/>
                 <Button onClick={this.reReel} id="reReel">RE-REEL
-                    <FontAwesomeIcon id="dice" icon={faDice} />
+                    <FontAwesomeIcon id="dice" icon={faDice} size={"4x"} />
                 </Button>
                 <SaveAndWatchButton/>
             </div>

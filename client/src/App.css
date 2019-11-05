@@ -69,5 +69,19 @@ ul.list-group {
 }
 
 #save-and-watch-button {
-  margin-left: 40px;
+  margin-left: 33px;
+}
+
+#reReel {
+  width: 300px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  margin-left: 33px;
+  background-color: #cf323a;
+  border: 0;
+  color: #ffffff;
+}
+
+#dice {
+  margin: 5px;
 }
