@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import { Button } from "reactstrap";
 import "./style.css";
 
-class SaveAndWatchButton extends Component {
+const SaveAndWatchButton = (props) => {
 
-    render () {
-        return (
-            <div>
-                <Button 
-                    onClick={this.onSubmit}
-                    id="save-and-watch-button">SAVE + WATCH</Button>
-            </div>
-        )
-    }
+    return (
+            <Button 
+                onClick={props.onClick}
+                id="save-and-watch-button">SAVE + WATCH</Button>
+    )
 }
+
 
 export default SaveAndWatchButton;
