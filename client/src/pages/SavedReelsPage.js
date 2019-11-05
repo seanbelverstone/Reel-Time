@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SavedReelsCard from "../components/SavedReelsCard";
 import Logo from "../components/Logo";
-import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
 import SavedReelList from "../components/SavedReelList";
 import SavedReelListItem from "../components/SavedReelListItem";
@@ -36,9 +35,7 @@ class SavedReelPage extends Component {
 
     return (
         <div>
-            <BackgroundVideo />
             <SavedReelsCard>
-
             <div className="page-header">
                 <Logo />
                 <p className="title-div">
@@ -46,17 +43,14 @@ class SavedReelPage extends Component {
                     <UsernameDisplay />
                 </p>
             </div>
-
             <div className="saved-page-container">
                 <SavedReelList>
                     <SavedReelListItem/>
                 </SavedReelList>
             </div>
-
             <div className="back-to-dashboard">
                 <BackToDashButton />
             </div>
-            
             </SavedReelsCard>
         </div>
     );
