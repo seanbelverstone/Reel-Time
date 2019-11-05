@@ -55,8 +55,6 @@ class NewReelPage extends Component {
                     recipeImage={recipe.recipe.image}
                     recipeTitle={recipe.recipe.label}
                     />
-                     );
-                })}
                 </NewReelList>
             </div>
 
