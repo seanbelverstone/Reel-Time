@@ -1,12 +1,12 @@
-const express = require("express");
-const path = require("path");
-const passport = require("passport");
+import express from "express";
+import path from "path";
+import passport from "passport";
 const PORT = process.env.PORT || 3001;
 const app = express();
 require("dotenv").config();
-const routes = require("./routes");
-const LocalStrategy = require('./strategies/local');
-const JWTStrategy = require('./strategies/jwt');
+import routes from "./routes";
+import LocalStrategy from './strategies/local';
+import JWTStrategy from './strategies/jwt';
 
 // Middleware
 app.use(express.json())
