@@ -33,17 +33,6 @@ class NewReelListItem extends Component {
           <p className="recipe-link"><span>Recipe: </span><a href={this.props.recipeLink} target="_blank">CLICK ME</a></p>
         </div>
       </div>
-
-        <div className="book-buttons">
-            {/* {!isDelete ? (
-                need to pass this function name to the deconstructor
-            <button onClick={this.HandleSave}>{this.state.text}</button>
-            ) : (
-                need to pass this function name to the deconstructor
-            <button onClick={HandleClick}>Delete</button>
-            )} */}
-            {/* <a className="view-link btn" rel="noreferrer noopener" target="_blank" href={link}>View</a> */}
-        </div>
     </li>
   );
   }
