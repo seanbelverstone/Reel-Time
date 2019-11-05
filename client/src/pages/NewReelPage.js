@@ -7,6 +7,7 @@ import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
+import StreamingService from "../components/StreamingService";
 
 
 class NewReelPage extends Component {
@@ -46,6 +47,10 @@ class NewReelPage extends Component {
                 {/* );
                 })} */}
                 </NewReelList>
+            </div>
+
+            <div className="streaming-buttons">
+                <StreamingService/>
             </div>
 
             <div className="button-section">
