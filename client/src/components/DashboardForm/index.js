@@ -25,14 +25,19 @@ class DashboardForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     // this is the function for searching for a movie
-    this.movieSearch();
-    // this is the function for searching for a recipe
-    this.recipeSearch();
+    this.movieSearch().then(() => {
+        // this is the function for searching for a recipe
+      this.recipeSearch().then(() => {
+        window.location.pathname = '/new-reel'
+      });
+    });
+    
 
+    
   }
 
   movieSearch = () => {
-    API.searchMovie(this.state.valueMovie)
+    return API.searchMovie(this.state.valueMovie)
       .then(results => {
 
         movieResults = results.data.results;
@@ -48,7 +53,7 @@ class DashboardForm extends Component {
   }
 
   recipeSearch = () => {
-    API.searchRecipe(this.state.valueCuisine)
+    return API.searchRecipe(this.state.valueCuisine)
       .then(results => {
 
         recipeResults = results.data.hits;
@@ -128,9 +133,7 @@ class DashboardForm extends Component {
             </select>
           </FormGroup>
           <div className="button-container">
-            <Link to="/new-reel">
-              <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
-            </Link>
+            <Button onClick={this.onSubmit} id="create_reel_btn">Create Reel</Button>
           </div> 
         </Form>
       </div>
