@@ -9,8 +9,6 @@ import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
 import StreamingService from "../components/StreamingService";
 import { Button } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDice } from '@fortawesome/free-solid-svg-icons'
 import API from "../utils/API";
 
 var movie;
@@ -142,14 +140,11 @@ class NewReelPage extends Component {
             <div className="button-section">
                 <BackToDashButton/>
 
-                <Button onClick={this.reReel} id="reReel">RE-REEL
-                    <FontAwesomeIcon id="dice" icon={faDice} size={"4x"} />
-                </Button>
+                <Button onClick={this.reReel} id="reReel">RE-REEL</Button>
 
                 <SaveAndWatchButton 
                     recipeLink={recipe.recipe.url}
                     onClick={this.handleButtonClick}/>
-
             </div>
 
             </NewReelCard>

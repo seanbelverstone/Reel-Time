@@ -1,16 +1,8 @@
 import React, {Component} from "react";
 import "./style.css";
 
-// BookListItem renders a list item containing data from the book api call
-class NewReelListItem extends Component {
-  // state = {
-  //   newReelMovieImg: BackToDashButton
-  // }
 
-  // HandleSave = () => {
-  //   this.setState({text: "Saved"});
-  //   this.props.HandleClick();
-  // }
+class NewReelListItem extends Component {
 
   render() {
   return (
@@ -28,7 +20,7 @@ class NewReelListItem extends Component {
           <img className="recipe-image" src={this.props.recipeImage} alt={this.props.recipeTitle} />
           <p className="recipe-title"><span>Title: </span>{this.props.recipeTitle}</p>
           <p className="recipe-cuisine"><span>Source: </span>{this.props.recipeSource}</p>
-          <p className="recipe-link"><span>Recipe: </span><a href={this.props.recipeLink} target="_blank">CLICK ME</a></p>
+          <p className="recipe-link"><span>Recipe: </span><a href={this.props.recipeLink} target="_blank" rel="noopener noreferrer">CLICK ME</a></p>
         </div>
       </div>
     </li>

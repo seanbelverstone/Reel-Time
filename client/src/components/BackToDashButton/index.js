@@ -10,12 +10,10 @@ class BackToDashButton extends Component {
 
     render () {
         return (
-            <div>
-                <Button 
-                    onClick={this.returnToDashboard}
-                    id="back-to-dash-button">BACK TO DASHBOARD
-                </Button>
-            </div>
+            <Button 
+                onClick={this.returnToDashboard}
+                id="back-to-dash-button">BACK TO DASHBOARD
+            </Button>
         )
     }
 }
