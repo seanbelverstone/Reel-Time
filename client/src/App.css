@@ -59,3 +59,15 @@ ul.list-group {
 .back-to-dashboard {
   text-align: center;
 }
+
+
+/* New Reel Page */
+.button-section {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+#save-and-watch-button {
+  margin-left: 40px;
+}
