@@ -29,30 +29,45 @@ class NewReelPage extends Component {
         this.setState({isButtonClicked: true});
 
         // getting user-id from cookie
-        let strDC  = JSON.stringify(document.cookie)       
-        let aPoint = strDC.search("; id=") + 5;
-        let zPoint = strDC.search("; username=");
-        const uID  = strDC.substring(aPoint, zPoint);
+        let strDC  = JSON.stringify(document.cookie)
+        console.log("11111111 strDC reg");
+        console.log(strDC);
+        // let strDCz = strDC.concat(";");
+        // let strDCz = strDC + "\;";
+        // let strDCz = strDC + /;/;
+        console.log("11111111 strDCz");
+        console.log(strDCz);
+        
 
-        // gathering movie data in localstorage
-        const moviestr = localStorage.getItem("movie");
-        const movieObj = JSON.parse(moviestr);
+        // let aa = strDC.search("}; ") + 3;
+        // let userInfoStr = strDC.substring(aa, aa.length);
+        // let userInfoStrz = userInfoStr.concat(";");
 
-        // gathering saved food-data in localstorage
-        const foodStr  = localStorage.getItem("recipe");
-        const foodObj  = JSON.parse(foodStr);
+        // console.log("88888888 strDC");
+        // console.log(strDC);
+        // console.log("88888888 userInfoStr");
+        // console.log(userInfoStrz);    
 
-        let reelObj = { movieTitle: movieObj.title,
-                        movieImage: movieObj.poster_path,
-                        movieSynopsis: movieObj.overview,
-                        recipeTitle: foodObj.recipe.label, 
-                        recipeImage: foodObj.recipe.image,
-                        recipeLink: foodObj.recipe.shareAs,
-                        rating: null,
-                        user_id: uID
-        };
 
-        this.storeReel(reelObj);
+        // // gathering movie data in localstorage
+        // const moviestr = localStorage.getItem("movie");
+        // const movieObj = JSON.parse(moviestr);
+
+        // // gathering saved food-data in localstorage
+        // const foodStr  = localStorage.getItem("recipe");
+        // const foodObj  = JSON.parse(foodStr);
+
+        // let reelObj = { movieTitle: movieObj.title,
+        //                 movieImage: movieObj.poster_path,
+        //                 movieSynopsis: movieObj.overview,
+        //                 recipeTitle: foodObj.recipe.label, 
+        //                 recipeImage: foodObj.recipe.image,
+        //                 recipeLink: foodObj.recipe.shareAs,
+        //                 rating: null,
+        //                 user_id: uID
+        // };
+
+        // this.storeReel(reelObj);
     }
 
     componentWillMount = () => {
