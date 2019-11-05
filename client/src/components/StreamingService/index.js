@@ -29,7 +29,7 @@ class StreamingService extends Component {
   render() {
     return (
       <div className="streaming-buttons">
-        <p className="streaming-text">Congrats! This Reel was added to your Saved Reels collection!<br></br>Clicking on the buttons will open one tab to the movie player and one to the recipe above.</p>
+        <p className="streaming-text">This Reel is now in your Saved Reels collection!<br></br>Click on your favorite movie streamer to open a tab to watch and a tab to eat.</p>
         <button onClick={this.handleClickNetflix}><img className="netflix" src={netflix} alt="netflix"></img></button>
 
         <button onClick={this.handleClickHulu}><img className="hulu" src={hulu} alt="hulu"></img></button>
