@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label } from "reactstrap";
-import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./style.css"
 
