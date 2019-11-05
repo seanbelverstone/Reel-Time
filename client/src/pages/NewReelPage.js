@@ -6,13 +6,14 @@ import NewReelListItem from "../components/NewReelListItem";
 import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
+import SaveAndWatchButton from "../components/SaveAndWatchButton";
 
 
 class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel Combo"
+        title: "New Reel + Yum Combo"
     }
     render () {
         return (
@@ -46,12 +47,12 @@ class NewReelPage extends Component {
                 })} */}
                 </NewReelList>
             </div>
-            <div className="back-to-dashboard">
+
+            <div className="button-section">
                 <BackToDashButton/>
-                {/* ) : ( */}
-                {/* <div></div> */}
-                {/* )} */}
+                <SaveAndWatchButton/>
             </div>
+
             </NewReelCard>
             </div>
         );
