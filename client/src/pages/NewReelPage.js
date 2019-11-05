@@ -8,13 +8,28 @@ import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
 import SaveAndWatchButton from "../components/SaveAndWatchButton";
 
+var movie;
+var recipe;
 
 class NewReelPage extends Component {
     state = {
-        movies: [],
-        newReelMovieImg: "",
-        title: "New Reel + Yum Combo"
+        title: "New Reel + Yum Combo",
     }
+
+    componentWillMount = () => {
+        this.getReel();
+    }
+
+    getReel = () => {
+        var currentMovie = localStorage.getItem("movie");
+        var currentRecipe = localStorage.getItem("recipe");
+
+        movie = JSON.parse(currentMovie);
+        recipe = JSON.parse(currentRecipe);
+
+        console.log(movie, recipe);
+    }
+
     render () {
         return (
             <div>
@@ -28,23 +43,19 @@ class NewReelPage extends Component {
             </div>
 
             <div className="new-reel-page-container">
-                {/* {!this.state.movies.length ? ( */}
                 <NewReelList>
-                {/* {this.state.books.map((movie, index) => { */}
-                {/* return ( */}
                     <NewReelListItem
-                        // movieImg={movie.newReelMovieImg}
-                    // key={index}
-                    // title={book.title}
-                    // authors={book.authors}
-                    // description={book.description}
-                    // image={book.image}
-                    // link={book.link}
-                    // HandleClick={() => this.handleSaveBook(book)}
-                    // isDelete={false}
+                    // Movie data
+                    movieImg={movie.poster_path}
+                    movieTitle={movie.original_title}
+                    description={movie.overview}
+
+                    // Recipe data
+                    recipeImage={recipe.recipe.image}
+                    recipeTitle={recipe.recipe.label}
                     />
-                {/* );
-                })} */}
+                     );
+                })}
                 </NewReelList>
             </div>
 
