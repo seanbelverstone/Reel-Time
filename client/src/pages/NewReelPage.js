@@ -28,8 +28,13 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
-        // gathering save food/movie in localstorage
+        // getting user-id from cookie       
+        let aPoint = document.cookie.search("}; id") + 5;
+        let zPoint = document.cookie.search("; username=");
+        const uID  = document.cookie.substring(aPoint, zPoint);
 
+
+        // gathering saved food-data in localstorage
         const foodStr  = localStorage.getItem("recipe");
         const foodObj = JSON.parse(foodStr);
 
@@ -39,7 +44,7 @@ class NewReelPage extends Component {
                         recipeImage: foodObj.recipe.image,
                         recipeLink: foodObj.recipe.shareAs,
                         rating: null,
-                        user_id: "d0Boy"
+                        user_id: uID
         };
         console.log(reelObj);
 
