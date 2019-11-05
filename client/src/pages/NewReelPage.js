@@ -6,6 +6,7 @@ import NewReelListItem from "../components/NewReelListItem";
 import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
 import BackToDashButton from "../components/BackToDashButton";
+import SaveAndWatchButton from "../components/SaveAndWatchButton";
 
 
 class NewReelPage extends Component {
@@ -48,6 +49,7 @@ class NewReelPage extends Component {
             </div>
             <div className="back-to-dashboard">
                 <BackToDashButton/>
+                <SaveAndWatchButton/>
                 {/* ) : ( */}
                 {/* <div></div> */}
                 {/* )} */}
