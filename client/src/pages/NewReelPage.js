@@ -54,6 +54,8 @@ class NewReelPage extends Component {
                     // Recipe data
                     recipeImage={recipe.recipe.image}
                     recipeTitle={recipe.recipe.label}
+                    recipeLink={recipe.recipe.url}
+                    recipeSource={recipe.recipe.source}
                     />
                      );
                 })}
