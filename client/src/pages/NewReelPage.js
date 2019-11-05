@@ -13,7 +13,7 @@ class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel Combo"
+        title: "New Reel + Yum Combo"
     }
     render () {
         return (
@@ -47,13 +47,12 @@ class NewReelPage extends Component {
                 })} */}
                 </NewReelList>
             </div>
-            <div className="back-to-dashboard">
+
+            <div className="button-section">
                 <BackToDashButton/>
                 <SaveAndWatchButton/>
-                {/* ) : ( */}
-                {/* <div></div> */}
-                {/* )} */}
             </div>
+
             </NewReelCard>
             </div>
         );
