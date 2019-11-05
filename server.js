@@ -8,6 +8,7 @@ import routes from "./routes";
 import LocalStrategy from './strategies/local';
 import JWTStrategy from './strategies/jwt';
 
+app.use(express.static("client/public"));
 // Middleware
 app.use(express.json())
 app.use(passport.initialize());
