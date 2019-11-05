@@ -19,8 +19,18 @@ var movieResults;
 var recipeResults;
 
 class NewReelPage extends Component {
-    state = {
-        title: "New Reel + Yum Combo",
+    // state = {
+    //     title: "New Reel + Yum Combo"
+    // }
+    constructor(props) {
+        super(props);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
+        this.state = {isButtonClicked: false};
+        this.state.title = "New Reel + Yum Combo";
+    }
+    
+    handleButtonClick() {
+        this.setState({isButtonClicked: true});
     }
 
     componentWillMount = () => {
@@ -89,6 +99,16 @@ class NewReelPage extends Component {
 
     
     render () {
+
+        const isButtonClicked = this.state.isButtonClicked;
+        let buttonDiv;
+
+        if (!isButtonClicked) {
+            buttonDiv = "";
+        } else {
+            buttonDiv = <StreamingService />
+        }
+
         return (
             <div>
             <NewReelCard>
@@ -116,17 +136,19 @@ class NewReelPage extends Component {
                     />
                 </NewReelList>
             </div>
-
+            
             <div className="streaming-buttons">
-                <StreamingService/>
+                {buttonDiv}
             </div>
 
             <div className="button-section">
                 <BackToDashButton/>
+                
                 <Button onClick={this.reReel} id="reReel">RE-REEL
                     <FontAwesomeIcon id="dice" icon={faDice} size={"4x"} />
                 </Button>
-                <SaveAndWatchButton/>
+
+                <SaveAndWatchButton onClick={this.handleButtonClick}/>
             </div>
 
             </NewReelCard>
