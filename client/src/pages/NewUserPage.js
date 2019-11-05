@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NewUserCard from "../components/NewUserCard";
 import Logo from "../components/Logo";
 import NewUserForm from "../components/NewUserForm";
-import BackgroundVideo from "../components/BackgroundVideo";
 import Title from "../components/TitleForEachPage";
 
 
@@ -15,7 +14,6 @@ class NewUserPage extends Component {
     render() {
         return (
             <div>
-            <BackgroundVideo />
             <NewUserCard>
             <div className="page-header">
                 <Logo />
