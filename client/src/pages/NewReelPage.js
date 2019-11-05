@@ -28,25 +28,32 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
+        let token;
+        let uID;
+
         // getting user-id from cookie
-        let strDC  = JSON.stringify(document.cookie)
-        console.log("11111111 strDC reg");
-        console.log(strDC);
-        // let strDCz = strDC.concat(";");
-        // let strDCz = strDC + "\;";
-        // let strDCz = strDC + /;/;
-        console.log("11111111 strDCz");
-        console.log(strDCz);
-        
+        let strDC  = JSON.stringify(document.cookie);        
+        let aa = strDC.search("}; ") + 3;
+        let userInfoArr = strDC.substring(aa, aa.length).split(";");
+        console.log("8888888888888888");
+        console.log(userInfoArr);
 
-        // let aa = strDC.search("}; ") + 3;
-        // let userInfoStr = strDC.substring(aa, aa.length);
-        // let userInfoStrz = userInfoStr.concat(";");
+        for(let i = 0; i < userInfoArr.length; i++) {
 
-        // console.log("88888888 strDC");
-        // console.log(strDC);
-        // console.log("88888888 userInfoStr");
-        // console.log(userInfoStrz);    
+            userInfoArr[i] = userInfoArr[i].trim();
+            let val = userInfoArr[i].split("=");
+
+            if(val[0] === "id") {
+                uID = val[1];  }
+            else if(val[0] === "token") {
+                token = val[1]}
+        }
+
+        console.log("11111111");
+        console.log(token);
+        console.log("11111111");
+        console.log(uID);
+
 
 
         // // gathering movie data in localstorage
