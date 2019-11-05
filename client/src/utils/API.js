@@ -22,15 +22,16 @@ export default {
     },
 
 
-    saveReel: function(reelObj, token) {
-        console.log("00000000 in APP.js");
-        console.log(token);
-        console.log(reelObj);
+    saveReel: function(arg) {
+        console.log("00000000 in APP.js, userTokenValue");
+        console.log(userTokenValue);
+        console.log("00000000 in APP.js, passed arg[1]");
+        console.log(arg[1]);
+        console.log("00000000");
 
         return axios.post("/api/savedDates", {
-            reelObj,
             headers: {
-                'Authorization': `Bearer ${token}`}})
+                'Authorization': `Bearer ${arg[1]}`}})
     },
         
     searchMovie: function(movie) {

@@ -71,15 +71,20 @@ class NewReelPage extends Component {
                         user_id: uID
         };
 
-        this.storeReel(reelObj, token);
+        let wrapper = [];
+        wrapper.push(reelObj);
+        wrapper.push(token);
+
+
+        this.storeReel(wrapper);
     }
 
     componentWillMount = () => {
         this.getReel();
     }
 
-    storeReel = reelObj => {
-        API.saveReel(reelObj)
+    storeReel = arg => {
+        API.saveReel(arg)
         .then(abc => {
             // atm, no post-stored process
         })
