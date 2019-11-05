@@ -1,12 +1,12 @@
-import express from "express";
-import path from "path";
-import passport from "passport";
+const express = require("express");
+const path = require("path");
+const passport = require("passport");
 const PORT = process.env.PORT || 3001;
 const app = express();
 require("dotenv").config();
-import routes from "./routes";
-import LocalStrategy from './strategies/local';
-import JWTStrategy from './strategies/jwt';
+const routes = require("./routes");
+const LocalStrategy = require('./strategies/local');
+const JWTStrategy = require('./strategies/jwt');
 
 // Middleware
 app.use(express.json())
@@ -19,7 +19,7 @@ passport.use(JWTStrategy);
 routes(app);
  
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+if (process.env.JAWSDB_URL || process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
