@@ -38,6 +38,7 @@ class SavedReelPage extends Component {
         <div>
             <BackgroundVideo />
             <SavedReelsCard>
+
             <div className="page-header">
                 <Logo />
                 <p className="title-div">
@@ -45,14 +46,17 @@ class SavedReelPage extends Component {
                     <UsernameDisplay />
                 </p>
             </div>
+
             <div className="saved-page-container">
                 <SavedReelList>
                     <SavedReelListItem/>
                 </SavedReelList>
             </div>
+
             <div className="back-to-dashboard">
                 <BackToDashButton />
             </div>
+            
             </SavedReelsCard>
         </div>
     );

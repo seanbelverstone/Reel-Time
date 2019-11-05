@@ -5,12 +5,14 @@ import NewReelList from "../components/NewReelList";
 import NewReelListItem from "../components/NewReelListItem";
 import Title from "../components/TitleForEachPage";
 import UsernameDisplay from "../components/UsernameDisplay";
+import BackToDashButton from "../components/BackToDashButton";
+
 
 class NewReelPage extends Component {
     state = {
         movies: [],
         newReelMovieImg: "",
-        title: "New Reel"
+        title: "New Reel Combo"
     }
     render () {
         return (
@@ -23,25 +25,29 @@ class NewReelPage extends Component {
                     <UsernameDisplay />
                 </p>
             </div>
-            <div>
+
+            <div className="new-reel-page-container">
                 {/* {!this.state.movies.length ? ( */}
-                    <NewReelList>
-                    {/* {this.state.books.map((movie, index) => { */}
-                    {/* return ( */}
-                        <NewReelListItem
-                            // movieImg={movie.newReelMovieImg}
-                        // key={index}
-                        // title={book.title}
-                        // authors={book.authors}
-                        // description={book.description}
-                        // image={book.image}
-                        // link={book.link}
-                        // HandleClick={() => this.handleSaveBook(book)}
-                        // isDelete={false}
-                        />
-                    {/* );
-                    })} */}
-                    </NewReelList>
+                <NewReelList>
+                {/* {this.state.books.map((movie, index) => { */}
+                {/* return ( */}
+                    <NewReelListItem
+                        // movieImg={movie.newReelMovieImg}
+                    // key={index}
+                    // title={book.title}
+                    // authors={book.authors}
+                    // description={book.description}
+                    // image={book.image}
+                    // link={book.link}
+                    // HandleClick={() => this.handleSaveBook(book)}
+                    // isDelete={false}
+                    />
+                {/* );
+                })} */}
+                </NewReelList>
+            </div>
+            <div className="back-to-dashboard">
+                <BackToDashButton/>
                 {/* ) : ( */}
                 {/* <div></div> */}
                 {/* )} */}
