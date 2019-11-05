@@ -52,18 +52,21 @@ class NewReelPage extends Component {
                         user_id: uID
         };
 
-        API.checkUser(reelObj)
-            .then(abc => {
-                // atm, no post-stored process
-            })
-            .catch(err => {
-                console.log(err);
-            });
-        
+        this.storeReel(reelObj);
     }
 
     componentWillMount = () => {
         this.getReel();
+    }
+
+    storeReel = reelObj => {
+        API.saveReel(reelObj)
+        .then(abc => {
+            // atm, no post-stored process
+        })
+        .catch(err => {
+            console.log(err);
+        });
     }
 
     getReel = () => {
