@@ -41,7 +41,7 @@ class NewReelListItem extends Component {
           <p className="recipe-cuisine"><span>Cuisine: </span>Italian</p>
           {/* <p className="recipe-cuisine"><span>Cuisine: </span>{recipeCuisine}</p> */}
 
-          <p className="recipe-link"><span>Recipe: </span><a href="https://www.goodtoknow.co.uk/recipes/spaghetti-carbonara">CLICK ME</a></p>
+          <p className="recipe-link"><span>Recipe: </span><a href="https://www.goodtoknow.co.uk/recipes/spaghetti-carbonara" target="_blank">CLICK ME</a></p>
           {/* <p className="recipe-link"><span>Link: </span>{recipeLink}</p> */}
         </div>
       </div>

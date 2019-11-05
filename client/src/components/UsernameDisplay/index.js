@@ -8,7 +8,6 @@ const UsernameDisplay = () => {
 	let temp = document.cookie.search("name=");
 	let uNameArray = document.cookie.substring(temp+5).split(";");
 	let uName = uNameArray[0];
-	console.log(uName);
 
 	return(
 		<div>
