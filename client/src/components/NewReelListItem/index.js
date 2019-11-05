@@ -21,22 +21,16 @@ class NewReelListItem extends Component {
         <div className="movie-data">
           <h4 className="movie-pick"># REEL PICK</h4>
           <img className="movie-image" src={`https://image.tmdb.org/t/p/original${this.props.movieImg}`} alt={title} />
-          <p className="movie-title"><span>Title: </span>{this.props.title}</p>
+          <p className="movie-title"><span>Title: </span>{this.props.movieTitle}</p>
           <p className="movie-description"><span>Description: </span>{this.props.description}</p>
         </div>
 
         <div className="recipe-data">
           <h4 className="food-pick"># YUM PICK</h4>
           <img className="recipe-image" src={this.props.recipeImage} alt={recipeTitle} />
-          {/* <img className="recipe-image" src={newReelRecipeImg} alt={recipeTitle} /> */}
           <p className="recipe-title"><span>Title: </span>{this.props.recipeTitle}</p>
-          {/* <p className="recipe-title"><span>Title: </span>{recipeTitle}</p> */}
-
-          <p className="recipe-cuisine"><span>Cuisine: </span>Italian</p>
-          {/* <p className="recipe-cuisine"><span>Cuisine: </span>{recipeCuisine}</p> */}
-
-          <p className="recipe-link"><span>Recipe: </span><a href="https://www.goodtoknow.co.uk/recipes/spaghetti-carbonara" target="_blank">CLICK ME</a></p>
-          {/* <p className="recipe-link"><span>Link: </span>{recipeLink}</p> */}
+          <p className="recipe-cuisine"><span>Source: </span>{this.props.recipeSource}</p>
+          <p className="recipe-link"><span>Recipe: </span><a href={this.props.recipeLink} target="_blank">CLICK ME</a></p>
         </div>
       </div>
 
