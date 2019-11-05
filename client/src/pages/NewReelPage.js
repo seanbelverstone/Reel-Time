@@ -13,9 +13,7 @@ var movie;
 var recipe;
 
 class NewReelPage extends Component {
-    // state = {
-    //     title: "New Reel + Yum Combo"
-    // }
+    
     constructor(props) {
         super(props);
         this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -86,7 +84,9 @@ class NewReelPage extends Component {
 
             <div className="button-section">
                 <BackToDashButton/>
-                <SaveAndWatchButton onClick={this.handleButtonClick}/>
+                <SaveAndWatchButton 
+                    recipeLink={recipe.recipe.url}
+                    onClick={this.handleButtonClick}/>
             </div>
 
             </NewReelCard>
