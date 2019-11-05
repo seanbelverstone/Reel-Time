@@ -19,7 +19,7 @@ passport.use(JWTStrategy);
 routes(app);
  
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+if (process.env.JAWSDB_URL || process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
