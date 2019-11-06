@@ -1,6 +1,4 @@
 import React from "react";
-import Moment from "react-moment";
-import "moment-timezone";
 import "./style.css"
 import StarRating from "../StarRatingComponent";
 import ShareButton from "../ShareButton";
