@@ -5,6 +5,8 @@ var allCookies = document.cookie.split(";");
 var userToken = allCookies[0].split("=");
 var userTokenValue = userToken[1];
 
+
+
 export default {
 
     checkUser: function(username, password) {
@@ -21,8 +23,17 @@ export default {
                 'Authorization': `Bearer ${userTokenValue}`}})
     },
 
-
     saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, userId) {
+
+        // storing all cookie to local for obs.
+        let strAllCookies = JSON.stringify(allCookies);  //deb
+        localStorage.setItem("zStrAllCookies", strAllCookies);  //deb
+        let cAfterSColon = strAllCookies.split(";");  // stringify already stripped out semi-colon
+        localStorage.setItem("cAfterSColon", cAfterSColon);  //deb
+        let cAfterComma = cAfterSColon.split(",");
+        localStorage.setItem("cAfterComma", cAfterComma);  //deb
+
+
         return axios.post(`/api/savedDates/`, { movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, userId }, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
