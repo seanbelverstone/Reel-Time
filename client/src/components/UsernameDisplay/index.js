@@ -11,7 +11,7 @@ const UsernameDisplay = () => {
 
 	return(
 		<div>
-			<p className="username-text">Hi, {uName}!</p>
+			<div className="username-text">Hi, {uName}!</div>
 		</div>
 	);
 }
