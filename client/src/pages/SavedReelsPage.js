@@ -9,13 +9,16 @@ import UsernameDisplay from "../components/UsernameDisplay";
 import API from "../utils/API";
 
 class SavedReelPage extends Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+        title : "Your Saved Reels",
+        username: "username",
+        savedReels: []
+      }
+    }
 
-  state = {
-    title : "Your Saved Reels",
-    username: "username"
-  }
-
-  componentDidMount() {
+  componentWillMount = () => {
     console.log("done")
     // this grabs the cookies and splits it to grab just the user's ID value
     var allCookies = document.cookie.split(";");
@@ -24,12 +27,15 @@ class SavedReelPage extends Component {
 
     API.getReels(userIdValue)
       .then(results => {
-        console.log(results.data)
+
+        this.state.savedReels.push(results.data);
+        console.log(this.state.savedReels)
         // The array of items from the database is stored in this results.data.
         // Please create an if statement, saying if no results, just maybe render a div saying "no saved reels :("
         // If results returned, map through them and append them to the corresponding areas below.
       })
   } 
+
 
   render() {
 
@@ -44,9 +50,25 @@ class SavedReelPage extends Component {
                 </p>
             </div>
             <div className="saved-page-container">
-                <SavedReelList>
-                    <SavedReelListItem/>
-                </SavedReelList>
+                  {this.state.savedReels.length ? (
+                    <SavedReelList>
+                      {Object.keys(this.state.savedReels).map(reel => (
+                          <SavedReelListItem
+                            key={reel.id}
+                            timestamp={reel.createdAt}
+                            movieTitle={reel.movieTitle}
+                            movieImage={reel.movieImage}
+                            movieSynopsis={reel.movieSynopsis}
+                            rating={reel.rating}
+                            recipeTitle={reel.recipeTitle}
+                            recipeLink={reel.recipeLink}
+                          
+                          />
+                      ))} 
+                    </SavedReelList>
+                       ) : (
+                          <div>No saved reels!</div>
+                        )} 
             </div>
             <div className="back-to-dashboard">
                 <BackToDashButton />

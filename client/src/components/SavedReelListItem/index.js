@@ -12,9 +12,9 @@ function SavedReelListItem (props) {
     return (
         <li>
             <div className="saved-content">
-                <p className="time-stamp">Watched: 00:00:00 / xx.xx.2019</p>
+                <p className="time-stamp">{`Watched: ${this.props.timestamp}`}</p>
 
-                <img className="movie-image" src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg" alt=""></img>
+                <img className="movie-image" src={this.props.movieImage} alt=""></img>
 
                 <h5 className="movie-title">Title: Black Panther</h5>
 
