@@ -32,7 +32,7 @@ function SavedReelListItem (props) {
                     <div className="saved-recipe">
                         <p><span id="saved-recipe-head">Saved Recipe</span></p>
                         <p><span id="saved-recipe"># Menu: </span>Food Title Here</p>
-                        <p><span id="saved-recipe"># Link: </span><a href="#">CLICKABLE LINK HERE</a></p>
+                        <p><span id="saved-recipe"># Link: </span>CLICKABLE LINK HERE</p>
                     </div>
                 </div>
             </li>
@@ -59,7 +59,7 @@ function SavedReelListItem (props) {
                     <div className="saved-recipe">
                         <p><span id="saved-recipe-head">Saved Recipe</span></p>
                         <p><span id="saved-recipe"># Menu: </span>Food Title Here</p>
-                        <p><span id="saved-recipe"># Link: </span><a href="#">CLICKABLE LINK HERE</a></p>
+                        <p><span id="saved-recipe"># Link: </span>CLICKABLE LINK HERE</p>
                     </div>
                 </div>
             </li>
@@ -86,7 +86,7 @@ function SavedReelListItem (props) {
                     <div className="saved-recipe">
                         <p><span id="saved-recipe-head">Saved Recipe</span></p>
                         <p><span id="saved-recipe"># Menu: </span>Food Title Here</p>
-                        <p><span id="saved-recipe"># Link: </span><a href="#">CLICKABLE LINK HERE</a></p>
+                        <p><span id="saved-recipe"># Link: </span>CLICKABLE LINK HERE</p>
                     </div>
                 </div>
             </li>

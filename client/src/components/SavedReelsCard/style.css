@@ -128,8 +128,3 @@
         margin-top: 20px;
     }
 }
-@media (min-width: 800px) {
-    .savedReelsCard{
-        margin-top:10%;
-    }
-}
