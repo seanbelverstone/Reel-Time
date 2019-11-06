@@ -64,7 +64,7 @@ class NewReelPage extends Component {
         API.saveReel(reelObj.movieTitle, reelObj.movieImage, reelObj.movieSynopsis, reelObj.recipeTitle, reelObj.recipeImage, reelObj.recipeLink, reelObj.rating, reelObj.userId)
         .then(results => {
             console.log(results.data)
-            // atm, no post-stored process
+            // atm, no post-stored process 
         })
         .catch(err => {
             console.log(err);
