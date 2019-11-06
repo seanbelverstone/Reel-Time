@@ -82,6 +82,13 @@ ul.list-group {
   color: #ffffff;
 }
 
+#back-to-dash-button:hover,
+#save-and-watch-button:hover,
+#reReel:hover {
+  filter: brightness(150%);
+}
+
+
 #dice {
   margin: 5px;
 }

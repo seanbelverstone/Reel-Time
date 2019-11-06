@@ -1,13 +1,7 @@
-/* .list-group-item {
-    margin-top: 30px;
-    padding: 15px;
-} */
-
 .new-reel-content {
     margin-top: 30px;
-    height: 535px;
+    min-height: 640px;
     padding: 15px;
-    overflow-y: scroll;
     background: rgb(248, 237, 237);
 }
 
@@ -15,7 +9,7 @@
     float: left;
     margin: 0 40px 0 0;
     width: 230px;       
-    height: 260px;
+    height: 280px;
 }
 
 .movie-data {
@@ -44,15 +38,27 @@
     width: 50%;
 }
 
+.movie-title {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 .movie-data span,
 .recipe-data span {
     font-weight: bold;
+    font-style: italic;
 }
 
 .recipe-image {
     float: left;
     margin: 0 40px 0 0;
     width: 230px;
+}
+
+.recipe-title {
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
 }
 
 .recipe-link a {
