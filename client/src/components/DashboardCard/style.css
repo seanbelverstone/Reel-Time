@@ -18,7 +18,7 @@
     padding: 20px 0;
 }
 .username-text {
-    text-align:center !important;
+    text-align:center;
 }
 .dashboardCard form.form-container {
     width: 100% !important;
@@ -106,7 +106,8 @@ select {
     .logo-container img {
         width: 100%;
     }
-    .title-text {
+    .title-text,
+    .username-text {
         text-align: right;
     }
     .dashboardCard form.form-container {

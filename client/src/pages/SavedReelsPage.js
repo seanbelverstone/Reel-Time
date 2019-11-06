@@ -38,10 +38,10 @@ class SavedReelPage extends Component {
             <SavedReelsCard>
             <div className="page-header">
                 <Logo />
-                <p className="title-div">
+                <div className="title-div">
                     <Title title={this.state.title} />
                     <UsernameDisplay />
-                </p>
+                </div>
             </div>
             <div className="saved-page-container">
                 <SavedReelList>
