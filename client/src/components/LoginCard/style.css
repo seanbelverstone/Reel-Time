@@ -3,11 +3,53 @@
     padding: 0 20px;
     width: 90%;
     max-width: 800px;
-    height: 550px;
-    margin: 50px auto 0 auto;
+    height: 800px;
+    margin: 50px auto;
     position: relative;
 }
 
+.page-header {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo-container {
+    width: 100%;
+    padding: 20px 0;
+}
+.logo-container img {
+    margin: 0 auto;
+    width: 50%;
+}
+.spacer {
+    display:block;
+    /* flex: 1 1; */
+}
+.button-container {
+    width: 100%;
+    margin: 30px auto !important;
+}
+.title-text {
+    font-size: 2.25em !important;
+    display:block !important;
+    text-align:center;
+    color: #cf323a !important;
+}
+#loginSlogan {
+    font-size: 1em;
+    text-align:center;
+}
+#login_btn,
+#new-user {
+    width: 100% !important;
+    margin:10px 0 !important;
+    background-color: #cf323a !important;
+}
+#login_btn:hover,
+#new-user:hover {
+    filter: brightness(150%);
+}
 .copyright {
     position: absolute;
     bottom: 10px;
@@ -17,8 +59,47 @@
     color: #404040;
 }
 
-@media only screen and (min-width: 450px) {
-    .default_card {
-       width:60%;
+@media (min-width: 600px) {
+    .logo-container img {
+        margin: 0 auto;
+        width: 30%;
+    }
+}
+
+@media (min-width: 700px) {
+    .loginCard {
+        height: 900px;
+    }
+    .title-text {
+        font-size: 3em !important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .loginCard{
+        height: 600px;
+    }
+    .page-header {
+        display: flex;
+    }
+    .logo-container {
+        width:25%;
+    }
+    .logo-container img {
+        width: 100%;
+    }
+    .title-text {
+        text-align: right;
+    }
+    #loginSlogan {
+        font-size: 1em;
+        text-align: right;
+    }
+    #login_btn,
+    #new-user {
+        width:40% !important;
+    }
+    #login_btn {
+        margin: 0 20px 0 0 !important;
     }
 }

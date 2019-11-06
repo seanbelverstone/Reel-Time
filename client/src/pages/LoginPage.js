@@ -20,7 +20,7 @@ class LoginPage extends Component {
             <LoginCard>
             <div className="page-header">
               <Logo></Logo>
-              <div>
+              <div className="titles">
                 <Title title={this.state.title} id="loginTitle" />
                 <p id="loginSlogan">The app that makes your date</p>
               </div>
