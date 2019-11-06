@@ -44,33 +44,32 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
-        var allCookies = document.cookie.split(";");
-        var userId = allCookies[1].split("=");
-        var userIdValue = userId[1];
-        var userIdInt = parseInt(userIdValue);
+        // var allCookies = document.cookie.split(";");
+        // var userId = allCookies[1].split("=");
+        // var userIdValue = userId[1];
+        // var userIdInt = parseInt(userIdValue);
         
+        // var reelObj = { 
+        //     movieTitle: movie.title,
+        //     movieImage: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+        //     movieSynopsis: movie.overview,
+        //     recipeTitle: recipe.recipe.label, 
+        //     recipeImage: recipe.recipe.image,
+        //     recipeLink: recipe.recipe.url,
+        //     rating: 1,
+        //     userId: userIdInt
+        // };
 
-        var reelObj = { 
-            movieTitle: movie.title,
-            movieImage: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-            movieSynopsis: movie.overview,
-            recipeTitle: recipe.recipe.label, 
-            recipeImage: recipe.recipe.image,
-            recipeLink: recipe.recipe.url,
-            rating: 1,
-            userId: userIdInt
-        };
+        // console.log(reelObj.userId);
 
-        console.log(reelObj.userId);
-
-        API.saveReel(reelObj.movieTitle, reelObj.movieImage, reelObj.movieSynopsis, reelObj.recipeTitle, reelObj.recipeImage, reelObj.recipeLink, reelObj.rating, reelObj.userId)
-        .then(results => {
-            console.log(results.data)
-            // atm, no post-stored process
-        })
-        .catch(err => {
-            console.log(err);
-        });
+        // API.saveReel(reelObj.movieTitle, reelObj.movieImage, reelObj.movieSynopsis, reelObj.recipeTitle, reelObj.recipeImage, reelObj.recipeLink, reelObj.rating, reelObj.userId)
+        // .then(results => {
+        //     console.log(results.data)
+        //     // atm, no post-stored process
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // });
     }
 
     // This function is similar to the one on Dashboard form, however it reloads the page instead of navigating to the next one
