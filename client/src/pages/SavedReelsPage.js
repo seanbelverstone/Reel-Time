@@ -35,8 +35,9 @@ class SavedReelPage extends Component {
       .then(results => {
           
           results.data.forEach(element => {
-            this.setState({splitResults: element})
             console.log(element)
+            this.state.reelResults.push(element)
+
         });
 
         // The array of items from the database is stored in this results.data.
