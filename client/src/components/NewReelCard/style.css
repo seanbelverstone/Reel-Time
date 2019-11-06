@@ -3,11 +3,29 @@
     padding: 0 20px;
     width: 90%;
     max-width: 800px;
-    min-height: 1175px;
+    height: 2100px;
     margin: 50px auto 0 auto;
     position: relative;
 }
 
+#newReelCardId .username-text {
+    text-align: center !important;
+}
+#newReelCardId .streaming-buttons {
+    margin: 0 auto;
+    text-align: center;
+}
+#newReelCardId .streaming-buttons button {
+    width: 40%;
+    margin: 0 10px;
+    max-width: 200px;
+}
+#newReelCardId .streaming-buttons button img{
+    width: 100%;
+}
+#newReelCardId .netflix, #newReelCardId .hulu, #newReelCardId .apple, #newReelCardId .amazon {
+    margin-left:0 !important;
+}
 .copyright {
     position: absolute;
     bottom: 10px;
@@ -16,9 +34,36 @@
     text-align: center;
     color: #404040;
 }
+#reReel {
+    background-image: url('./dice.jpg');
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    background-size: 40px;
+}
 
-@media only screen and (min-width: 450px) {
-    .default_card {
-       width:60%;
+@media (min-width: 780px) {
+    .newReelCard  {
+        height: 1500px !important;
+    }
+    #newReelCardId .streaming-buttons {
+        max-width: 450px;
+    }
+    #newReelCardId .netflix, #newReelCardId .hulu, #newReelCardId .apple, #newReelCardId .amazon {
+        margin-left:0 !important;
+    }
+}
+@media (min-width: 1100px) {
+    .newReelCard  {
+        height: 1300px !important;
+    }
+    
+    #newReelCardId .streaming-buttons {
+        max-width: 100%;
+    }
+    #newReelCardId .streaming-buttons button {
+        width: 20%;
+    }
+    #newReelCardId .username-text {
+        text-align: right !important;
     }
 }
