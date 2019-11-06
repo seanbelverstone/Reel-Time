@@ -29,7 +29,7 @@ export default {
         console.log(arg[1]);
         console.log("00000000");
 
-        return axios.post("/api/savedDates", {
+        return axios.post(`/api/savedDates/`, {
             headers: {
                 'Authorization': `Bearer ${arg[1]}`}})
     },

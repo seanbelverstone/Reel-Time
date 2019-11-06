@@ -75,7 +75,6 @@ class NewReelPage extends Component {
         wrapper.push(reelObj);
         wrapper.push(token);
 
-
         this.storeReel(wrapper);
     }
 
