@@ -2,7 +2,12 @@
   width: 120px;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: rgb(28, 156, 92);
+  background-color: rgb(50, 187, 119);
   border: 0;
   color: #ffffff;
+}
+
+#replay-button:hover {
+  background-color: rgb(92, 233, 162);
+  font-weight: bolder;
 }
