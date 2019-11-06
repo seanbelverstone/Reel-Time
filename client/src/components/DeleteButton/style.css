@@ -2,7 +2,12 @@
   width: 120px;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #c3666b;
+  background-color: #ca464c;
   border: 0;
   color: #ffffff;
+}
+
+#delete-button:hover {
+  background-color: #fa646b;
+  font-weight: bolder;
 }

@@ -1,13 +1,7 @@
-/* .list-group-item {
-    margin-top: 30px;
-    padding: 15px;
-} */
-
 .new-reel-content {
     margin-top: 30px;
-    height: 535px;
+    min-height: 640px;
     padding: 15px;
-    overflow-y: scroll;
     background: rgb(248, 237, 237);
 }
 
@@ -15,7 +9,7 @@
     float: left;
     margin: 0 40px 0 0;
     width: 230px;       
-    height: 260px;
+    height: 280px;
 }
 
 .movie-data {
@@ -44,9 +38,15 @@
     width: 50%;
 }
 
+.movie-title {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 .movie-data span,
 .recipe-data span {
     font-weight: bold;
+    font-style: italic;
 }
 
 .recipe-image {
@@ -55,32 +55,14 @@
     width: 230px;
 }
 
+.recipe-title {
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .recipe-link a {
-    color: rgb(209, 94, 94);
+    color: rgb(209, 94, 104);
     font-weight: bolder;
 }
-
-/* .recipe-data,
-.movie-data,
-.movie-data p {
-    position: abolute;
-    display: flex;
-} */
-
-
-/* .view-link {
-    float: right;
-    color: #ffffff;
-    background-color: blue;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    margin-right: 15px;
-}
-.view-link:hover {
-    filter: brightness(80%);
-    text-decoration: none;
-    color: #ffffff;
-} */
 

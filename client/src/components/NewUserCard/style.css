@@ -3,9 +3,22 @@
     padding: 0 20px;
     width: 90%;
     max-width: 800px;
-    height: 635px;
+    height: 820px;
     margin: 50px auto 40px auto;
     position: relative;
+}
+.newUserCard .title-text {
+    margin-bottom: 20px;
+}
+
+#signup_btn {
+    background-color: #cf323a !important;
+    width: 100% !important;
+    max-width: 200px !important;
+}
+
+#signup_btn:hover {
+    filter: brightness(150%);
 }
 
 .copyright {
@@ -17,8 +30,14 @@
     color: #404040;
 }
 
-@media only screen and (min-width: 450px) {
-    .default_card {
-       width:60%;
+@media (min-width: 360px) {
+    #signup_btn {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .newUserCard .form-container {
+        margin-top: 40px;
     }
 }

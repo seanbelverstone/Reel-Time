@@ -152,6 +152,8 @@ class NewReelPage extends Component {
                     // Movie data
                     movieImg={movie.poster_path}
                     movieTitle={movie.original_title}
+                    movieRating={movie.vote_average}
+                    movieReleaseDate={movie.release_date}
                     description={movie.overview}
 
                     // Recipe data
@@ -159,6 +161,8 @@ class NewReelPage extends Component {
                     recipeTitle={recipe.recipe.label}
                     recipeLink={recipe.recipe.url}
                     recipeSource={recipe.recipe.source}
+                    recipeHealthLabel={recipe.recipe.healthLabels[0]}
+                    recipeCalories={recipe.recipe.calories}
                     />
                 </NewReelList>
             </div>

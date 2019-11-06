@@ -27,6 +27,10 @@ ul {
     padding: 0;
 }
 
+ul .buttons {
+    padding-bottom: 10px !important;
+}
+
 .movie-synopsis {
     overflow-y: scroll;
     height: 160px;

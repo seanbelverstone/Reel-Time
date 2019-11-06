@@ -60,6 +60,12 @@ ul.list-group {
   text-align: center;
 }
 
+/* #replay-button:hover,
+#share-button:hover,
+#delete-button:hover {
+  filter: brightness(100%);
+} */
+
 
 /* New Reel Page */
 .button-section {
@@ -81,6 +87,13 @@ ul.list-group {
   border: 0;
   color: #ffffff;
 }
+
+#back-to-dash-button:hover,
+#save-and-watch-button:hover,
+#reReel:hover {
+  filter: brightness(150%);
+}
+
 
 #dice {
   margin: 5px;
