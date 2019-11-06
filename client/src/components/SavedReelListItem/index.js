@@ -5,6 +5,13 @@ import ShareButton from "../ShareButton";
 import DeleteButton from "../DeleteButton";
 import ReplayButton from "../ReplayButton";
 
+import React from "react";
+import "./style.css"
+import StarRating from "../StarRatingComponent";
+import ShareButton from "../ShareButton";
+import DeleteButton from "../DeleteButton";
+import ReplayButton from "../ReplayButton";
+
 // RecipeList renders a bootstrap list item
 function SavedReelListItem (props) {
     return (

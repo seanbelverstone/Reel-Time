@@ -10,12 +10,21 @@ import API from "../utils/API";
 
 class SavedReelPage extends Component {
 
-  state = {
-    title : "Your Saved Reels",
-    username: "username"
-  }
+      state = {
+        title : "Your Saved Reels",
+        username: "username",
+        reelResults: [],
+        splitResults: []
+      }
 
   componentDidMount() {
+
+    this.loadReels();
+    
+  } 
+
+
+  loadReels = () => {
     console.log("done")
     // this grabs the cookies and splits it to grab just the user's ID value
     var allCookies = document.cookie.split(";");
@@ -24,12 +33,18 @@ class SavedReelPage extends Component {
 
     API.getReels(userIdValue)
       .then(results => {
-        console.log(results.data)
+          
+          results.data.forEach(element => {
+            this.setState({splitResults: element})
+            console.log(element)
+        });
+
         // The array of items from the database is stored in this results.data.
         // Please create an if statement, saying if no results, just maybe render a div saying "no saved reels :("
         // If results returned, map through them and append them to the corresponding areas below.
-      })
-  } 
+  })
+}
+
 
   render() {
 
@@ -45,7 +60,24 @@ class SavedReelPage extends Component {
             </div>
             <div className="saved-page-container">
                 <SavedReelList>
-                    <SavedReelListItem/>
+                  {this.state.reelResults.map(reel => {
+                      return (
+                      <SavedReelListItem
+                        key={reel.id}
+                        timestamp={reel.createdAt}
+                        movieTitle={reel.movieTitle}
+                        movieImage={reel.movieImage}
+                        movieSynopsis={reel.movieSynopsis}
+                        rating={reel.rating}
+                        recipeTitle={reel.recipeTitle}
+                        recipeLink={reel.recipeLink}
+                      
+                      />
+                    )
+                      }
+
+                    )
+                  }
                 </SavedReelList>
             </div>
             <div className="back-to-dashboard">
