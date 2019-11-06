@@ -60,24 +60,24 @@ class SavedReelPage extends Component {
             </div>
             <div className="saved-page-container">
                 <SavedReelList>
-                  {this.state.reelResults.map(reel => {
-                      return (
+                  {/* {this.state.reelResults.map(reel => { */}
+                      {/* return ( */}
                       <SavedReelListItem
-                        key={reel.id}
-                        timestamp={reel.createdAt}
-                        movieTitle={reel.movieTitle}
-                        movieImage={reel.movieImage}
-                        movieSynopsis={reel.movieSynopsis}
-                        rating={reel.rating}
-                        recipeTitle={reel.recipeTitle}
-                        recipeLink={reel.recipeLink}
+                        // key={reel.id}
+                        // timestamp={reel.createdAt}
+                        // movieTitle={reel.movieTitle}
+                        // movieImage={reel.movieImage}
+                        // movieSynopsis={reel.movieSynopsis}
+                        // rating={reel.rating}
+                        // recipeTitle={reel.recipeTitle}
+                        // recipeLink={reel.recipeLink}
                       
                       />
-                    )
+                    {/* )
                       }
 
                     )
-                  }
+                  } */}
                 </SavedReelList>
             </div>
             <div className="back-to-dashboard">
