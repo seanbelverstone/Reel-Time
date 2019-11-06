@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     recipeImage: DataTypes.STRING,
     recipeLink: DataTypes.STRING,
     rating: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
+    userId: DataTypes.INTEGER
   }, {});
 
   SavedDate.sync();

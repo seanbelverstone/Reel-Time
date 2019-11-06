@@ -5,7 +5,7 @@ module.exports = {
     console.log(request.user)
     db.SavedDate.findAll({
         where: {
-            user_id: request.user.id
+            userId: request.user.id
         }
     }).then((savedDates) => {
       response.json(savedDates);

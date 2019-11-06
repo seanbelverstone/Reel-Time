@@ -26,48 +26,9 @@ class NewReelPage extends Component {
         this.state = {isButtonClicked: false};
         this.state.title = "New Reel + Yum Combo";
     }
-    
-    handleButtonClick() {
-        this.setState({isButtonClicked: true});
-
-        var allCookies = document.cookie.split(";");
-        var userId = allCookies[2].split("=");
-        var userIdValue = userId[1];
-        
-        // gathering movie data in localstorage
-        const moviestr = localStorage.getItem("movie");
-        const movieObj = JSON.parse(moviestr);
-
-        // gathering saved food-data in localstorage
-        const foodStr  = localStorage.getItem("recipe");
-        const foodObj  = JSON.parse(foodStr);
-
-        let reelObj = { movieTitle: movieObj.title,
-                        movieImage: movieObj.poster_path,
-                        movieSynopsis: movieObj.overview,
-                        recipeTitle: foodObj.recipe.label, 
-                        recipeImage: foodObj.recipe.image,
-                        recipeLink: foodObj.recipe.shareAs,
-                        rating: null,
-                        user_id: userIdValue
-        };
-
-        this.storeReel(reelObj);
-    }
 
     componentWillMount = () => {
         this.getReel();
-    }
-
-    storeReel = data => {
-        API.saveReel(data)
-        .then(results => {
-            console.log(results)
-            // atm, no post-stored process
-        })
-        .catch(err => {
-            console.log(err);
-        });
     }
 
     getReel = () => {
@@ -78,6 +39,38 @@ class NewReelPage extends Component {
         // Parses it from a string into a once again useable JSON and assigns it to a global variable
         movie = JSON.parse(currentMovie);
         recipe = JSON.parse(currentRecipe);
+    }
+    
+    handleButtonClick() {
+        this.setState({isButtonClicked: true});
+
+        var allCookies = document.cookie.split(";");
+        var userId = allCookies[1].split("=");
+        var userIdValue = userId[1];
+        var userIdInt = parseInt(userIdValue);
+        
+
+        var reelObj = { 
+            movieTitle: movie.title,
+            movieImage: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+            movieSynopsis: movie.overview,
+            recipeTitle: recipe.recipe.label, 
+            recipeImage: recipe.recipe.image,
+            recipeLink: recipe.recipe.url,
+            rating: 1,
+            userId: userIdInt
+        };
+
+        console.log(reelObj.userId);
+
+        API.saveReel(reelObj.movieTitle, reelObj.movieImage, reelObj.movieSynopsis, reelObj.recipeTitle, reelObj.recipeImage, reelObj.recipeLink, reelObj.rating, reelObj.userId)
+        .then(results => {
+            console.log(results.data)
+            // atm, no post-stored process
+        })
+        .catch(err => {
+            console.log(err);
+        });
     }
 
     // This function is similar to the one on Dashboard form, however it reloads the page instead of navigating to the next one
