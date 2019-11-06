@@ -4,7 +4,7 @@
     padding: 0 20px 100px 20px;
     width: 90%;
     max-width: 800px;
-    margin: 50px auto 0 auto;
+    margin: 50px auto;
     position: relative;
     height: auto;
 }
@@ -126,5 +126,10 @@
     }
     #savedReelsCardId .saved-recipe {
         margin-top: 20px;
+    }
+}
+@media (min-width: 800px) {
+    .savedReelsCard{
+        margin-top:10%;
     }
 }
