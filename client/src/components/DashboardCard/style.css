@@ -3,11 +3,28 @@
     padding: 0 20px;
     width: 90%;
     max-width: 800px;
-    height: 550px;
+    height: 700px;
     margin: 50px auto 0 auto;
     position: relative;
 }
-
+.page-header {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo-container {
+    width: 100%;
+    padding: 20px 0;
+}
+.username-text {
+    text-align:center !important;
+}
+.dashboardCard form.form-container {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0 20px !important;
+}
 .copyright {
     position: absolute;
     bottom: 10px;
@@ -16,9 +33,93 @@
     text-align: center;
     color: #404040;
 }
+.dashboard .form-group {
+    margin: 0 auto;
+    text-align: left;
+}
+.dashboard label {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.8rem !important;
+    margin-right:0 !important;
+}
+select {
+    width: 100% !important;
+    margin: 10px 0;
+    border: 1px solid #404040;
+}
+#saved_reels_btn,
+#create_reel_btn  {
+    margin: 10px !important;
+    background-color: #cf323a !important;
+}
+#saved_reels_btn:hover,
+#create_reel_btn:hover  {
+    filter: brightness(150%);
+}
 
-@media only screen and (min-width: 450px) {
-    .default_card {
-       width:60%;
+@media (min-width: 300px) {
+    .dashboardCard {
+        height:700px;
+    }
+    .title-text {
+        font-size: 2em !important;
+    }
+    label {
+        margin-right:0 !important;
+    }
+}
+
+@media (min-width: 400px) {
+    .dashboardCard {
+        height: 800px;
+    }
+}
+
+@media (min-width: 600px) {
+    .title-text {
+        font-size: 2.5em !important;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .dashboardCard {
+        height: 850px;
+    }
+    .dashboardCard.form-group {
+        width: 50%;
+        margin:0 auto;
+    }
+}
+
+@media (min-width: 1100px) {
+    .dashboardCard{
+        height: 600px;
+    }
+    .page-header {
+        display: flex;
+    }
+    .logo-container {
+        width:25%;
+    }
+    .logo-container img {
+        width: 100%;
+    }
+    .title-text {
+        text-align: right;
+    }
+    .dashboardCard form.form-container {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+    .dashboardCard form.form-container .form-group {
+        text-align: center !important;
+    }
+    .dashboardCard form.form-container .form-group label{
+       margin-right: 20px !important;
+    }
+    .dashboardCard form.form-container select{
+        width: 50% !important;
     }
 }

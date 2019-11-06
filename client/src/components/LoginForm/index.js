@@ -80,7 +80,7 @@ class LoginForm extends Component {
                         <Button
                             onClick={this.createUser}
                             id="new-user"
-                            >CREATE NEW USER
+                            >NEW USER
                         </Button>
                     </div>
                 </Form>

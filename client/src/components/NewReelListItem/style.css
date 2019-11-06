@@ -1,8 +1,3 @@
-/* .list-group-item {
-    margin-top: 30px;
-    padding: 15px;
-} */
-
 .new-reel-content {
     margin-top: 30px;
     height: 535px;
@@ -56,31 +51,7 @@
 }
 
 .recipe-link a {
-    color: rgb(209, 94, 94);
+    color: rgb(209, 94, 104);
     font-weight: bolder;
 }
-
-/* .recipe-data,
-.movie-data,
-.movie-data p {
-    position: abolute;
-    display: flex;
-} */
-
-
-/* .view-link {
-    float: right;
-    color: #ffffff;
-    background-color: blue;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    margin-right: 15px;
-}
-.view-link:hover {
-    filter: brightness(80%);
-    text-decoration: none;
-    color: #ffffff;
-} */
 
