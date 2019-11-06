@@ -1,13 +1,61 @@
 .savedReelsCard{
     background-color: #ffffff;
-    padding: 0 20px;
+    background-color: #ffffff;
+    padding: 0 20px 100px 20px;
     width: 90%;
     max-width: 800px;
-    min-height: 900px;
     margin: 50px auto 0 auto;
     position: relative;
+    height: auto;
 }
-
+#savedReelsCardId .time-stamp{
+    width: 100%;
+    text-align: center;
+}
+#savedReelsCardId .movie-image {
+    width: 100%;
+    height: auto;
+    float:none;
+    margin:0;
+    padding:0;
+}
+#savedReelsCardId .movie-title {
+    text-align: center;
+    margin: 10px 0;
+}
+#savedReelsCardId .dv-star-rating {
+    width:100%;
+    margin:0 auto;
+}
+#savedReelsCardId .movie-synopsis {
+    width:100%;
+    margin:0 auto;
+}
+#savedReelsCardId .saved-content {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height:auto;
+}
+#savedReelsCardId .star-rating-component {
+    margin: 0 auto;
+    width: 75px;
+    text-align: center;
+}
+#savedReelsCardId ul.buttons {
+    display:block;
+    width:100%;
+}
+#savedReelsCardId ul.buttons li{
+    display:block;
+    width:100%;
+}
+#savedReelsCardId ul.buttons li button{
+    display:block;
+    width:100%;
+}
+#share-button {
+    margin:20px 0 0 0 !important;
+}
 .copyright {
     position: absolute;
     bottom: 10px;
@@ -17,8 +65,66 @@
     color: #404040;
 }
 
-@media only screen and (min-width: 450px) {
-    .default_card {
-       width:60%;
+@media (min-width: 800px) {
+    #savedReelsCardId .page-header {
+        display:flex;
+    }
+    #savedReelsCardId .logo-container {
+        width:25%;
+    }
+    #savedReelsCardId .logo-container img {
+        width: 100%;
+    }
+    #savedReelsCardId .title-text {
+        text-align: right;
+    }
+    #savedReelsCardId .time-stamp {
+        text-align: left;
+    }
+    #savedReelsCardId .movie-content-container {
+        width:100%;
+        display:inline-block;
+        overflow: hidden;
+        clear: both;
+    }
+    #savedReelsCardId .movie-image {
+        width:25%;
+        float:left;
+    }
+    #savedReelsCardId .movie-content-right {
+        width:70%;
+        float:right;
+    }
+    #savedReelsCardId .movie-title {
+        width:100%;
+        text-align:left;
+    }
+    #savedReelsCardId .star-rating-component {
+        overflow: hidden;
+        clear: both;
+        float: left;
+        text-align:left;
+        display:block;
+    }
+    #savedReelsCardId .dv-star-rating {
+        overflow: hidden;
+        clear: both;
+        float: left;
+        text-align: left;
+        width: 100%;
+    }
+    #savedReelsCardId .movie-synopsis{
+        height: 125px;
+    }
+    #savedReelsCardId ul.buttons {
+        display: inline-block;
+    }
+    #savedReelsCardId ul.buttons li{
+        width: 25%;
+        float:left;
+        margin: 0 10px;
+    }
+    #savedReelsCardId .saved-recipe {
+        margin-top: 20px;
     }
 }

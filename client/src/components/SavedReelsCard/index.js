@@ -4,7 +4,7 @@ import "./style.css";
 class SavedReelsCard extends Component {
   render() {
     return (
-      <div className="savedReelsCard">
+      <div className="savedReelsCard" id="savedReelsCardId">
         {this.props.children}
         <span className="copyright">© 2019 Reel Time</span>
       </div>
