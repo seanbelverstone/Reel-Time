@@ -30,30 +30,9 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
-        let token;
-        let uID;
-
-        // convert part of document.cookie to extract, user-id and token
-        let strDC  = JSON.stringify(document.cookie);        
-        let aa = strDC.search("}; ") + 3;
-        let userInfoArr = strDC.substring(aa, aa.length).split(";");
-        console.log("8888888888888888 userInfoArr");
-        console.log(userInfoArr);
-
-        // loop to obtain relevant data
-        for(let i = 0; i < userInfoArr.length; i++) {
-
-            userInfoArr[i] = userInfoArr[i].trim();
-            let val = userInfoArr[i].split("=");
-
-            if(val[0] === "id") {
-                uID = val[1];  }
-            else if(val[0] === "token") {
-                token = val[1];  } 
-        }
-        console.log("8888888888888888  id and token");
-        console.log(uID);
-        console.log(token);
+        var allCookies = document.cookie.split(";");
+        var userId = allCookies[2].split("=");
+        var userIdValue = userId[1];
         
         // gathering movie data in localstorage
         const moviestr = localStorage.getItem("movie");
@@ -70,23 +49,20 @@ class NewReelPage extends Component {
                         recipeImage: foodObj.recipe.image,
                         recipeLink: foodObj.recipe.shareAs,
                         rating: null,
-                        user_id: uID
+                        user_id: userIdValue
         };
 
-        let wrapper = [];
-        wrapper.push(reelObj);
-        wrapper.push(token);
-
-        this.storeReel(wrapper);
+        this.storeReel(reelObj);
     }
 
     componentWillMount = () => {
         this.getReel();
     }
 
-    storeReel = arg => {
-        API.saveReel(arg)
-        .then(abc => {
+    storeReel = data => {
+        API.saveReel(data)
+        .then(results => {
+            console.log(results)
             // atm, no post-stored process
         })
         .catch(err => {
