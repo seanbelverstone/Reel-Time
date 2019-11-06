@@ -22,10 +22,17 @@ export default {
     },
 
 
-    saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id) {
-        return axios.post("/api/savedDates", {movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, user_id})},
-    
-    
+    saveReel: function(arg) {
+        console.log("00000000 in APP.js, userTokenValue");
+        console.log(userTokenValue);
+        console.log("00000000 in APP.js, passed arg[1]");
+        console.log(arg[1]);
+        console.log("00000000");
+
+        return axios.post(`/api/savedDates/`, {
+            headers: {
+                'Authorization': `Bearer ${arg[1]}`}})
+    },
         
     searchMovie: function(movie) {
         return axios.get(`/api/movie/${movie}`,  {
