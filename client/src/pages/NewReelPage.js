@@ -122,6 +122,7 @@ class NewReelPage extends Component {
                     // Movie data
                     movieImg={movie.poster_path}
                     movieTitle={movie.original_title}
+                    movieRating={movie.vote_average}
                     movieReleaseDate={movie.release_date}
                     description={movie.overview}
 

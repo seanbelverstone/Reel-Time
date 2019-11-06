@@ -12,8 +12,9 @@ class NewReelListItem extends Component {
           <h4 className="movie-pick"># REEL PICK</h4>
           <img className="movie-image" src={`https://image.tmdb.org/t/p/original${this.props.movieImg}`} alt={this.props.movieTitle} />
           <p className="movie-title"><span>Title: </span>{this.props.movieTitle}</p>
-          <p className="movie-title"><span>Date Released: </span>{this.props.movieReleaseDate}</p>
-          <p className="movie-description"><span>Description: </span>{this.props.description}</p>
+          <p className="movie-rating"><span>Rating: </span>  {this.props.movieRating} / 10</p>
+          <p className="movie-release-date"><span>Date Released: </span>{this.props.movieReleaseDate}</p>
+          <p className="movie-description"><span>Synopsis: </span>{this.props.description}</p>
         </div>
 
         <div className="recipe-data">
