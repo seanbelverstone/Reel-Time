@@ -22,21 +22,12 @@ export default {
     },
 
 
-    saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle,  recipeImage, recipeLink, rating, user_id) {
-        return axios.post(`/api/savedDates/`, {
-            movieTitle,
-            movieImage,
-            movieSynopsis,
-            recipeTitle, 
-            recipeImage,
-            recipeLink,
-            rating,
-            user_id
-        }, {
+    saveReel: function(movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, userId) {
+        return axios.post(`/api/savedDates/`, { movieTitle, movieImage, movieSynopsis, recipeTitle, recipeImage, recipeLink, rating, userId }, {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
     },
-        
+
     searchMovie: function(movie) {
         return axios.get(`/api/movie/${movie}`,  {
             headers: {
