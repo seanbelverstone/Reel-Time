@@ -131,6 +131,8 @@ class NewReelPage extends Component {
                     recipeTitle={recipe.recipe.label}
                     recipeLink={recipe.recipe.url}
                     recipeSource={recipe.recipe.source}
+                    recipeHealthLabel={recipe.recipe.healthLabels[0]}
+                    recipeCalories={recipe.recipe.calories}
                     />
                 </NewReelList>
             </div>

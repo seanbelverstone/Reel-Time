@@ -1,6 +1,6 @@
 .new-reel-content {
     margin-top: 30px;
-    min-height: 610px;
+    min-height: 640px;
     padding: 15px;
     background: rgb(248, 237, 237);
 }
@@ -9,7 +9,7 @@
     float: left;
     margin: 0 40px 0 0;
     width: 230px;       
-    height: 260px;
+    height: 280px;
 }
 
 .movie-data {
@@ -46,6 +46,7 @@
 .movie-data span,
 .recipe-data span {
     font-weight: bold;
+    font-style: italic;
 }
 
 .recipe-image {
