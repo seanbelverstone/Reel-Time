@@ -39,6 +39,12 @@ export default {
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
 
+    },
+
+    deleteReel: function(id) {
+        return axios.delete(`/api/savedDates/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${userTokenValue}`}})
     }
 }
 
