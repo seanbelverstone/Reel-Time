@@ -7,6 +7,7 @@ import ReplayButton from "../ReplayButton";
 
 // RecipeList renders a bootstrap list item
 function SavedReelListItem (props) {
+
     return (
         <li>
             <div className="saved-content">
@@ -24,7 +25,7 @@ function SavedReelListItem (props) {
                         <ul className="buttons">
                             <li><ReplayButton /></li>
                             <li><ShareButton /></li>
-                            <li><DeleteButton /></li>
+                            <li><button id="delete-button" onClick={props.handleDelete}>DELETE</button></li>
                         </ul>
                     </div>
                 </div>

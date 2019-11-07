@@ -35,10 +35,7 @@ class SavedReelPage extends Component {
       .then(results => {
           
         this.setState({reelResults: results.data});
-          // results.data.forEach(element => {
-          //   console.log(element)
-          //   this.state.reelResults.push(element)
-          //   console.log(this.state.reelResults)
+
 
         });
 
@@ -47,6 +44,16 @@ class SavedReelPage extends Component {
         // If results returned, map through them and append them to the corresponding areas below.
   // })
 }
+
+
+deleteReel = (id) => {
+  console.log("DELETING")
+  API.deleteReel(id)
+    .then(results => {
+      window.location.reload();
+    });
+}
+
  renderSavedReels() {
     return this.state.reelResults.map(reel => { 
       return (
@@ -59,6 +66,7 @@ class SavedReelPage extends Component {
           rating={reel.rating}
           recipeTitle={reel.recipeTitle}
           recipeLink={reel.recipeLink}
+          handleDelete={() => this.deleteReel(reel.id)}
         /> 
       )
   })
