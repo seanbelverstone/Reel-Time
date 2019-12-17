@@ -24,7 +24,7 @@ class NewReelListItem extends Component {
           <p className="recipe-title"><span>Title: </span>{this.props.recipeTitle}</p>
           <p className="recipe-cuisine"><span>Source: </span>{this.props.recipeSource}</p>
           <p className="recipe-health-label"><span>Health Label: </span>{this.props.recipeHealthLabel}</p>
-          <p className="recipe-calories"><span>Calories: </span>{this.props.recipeCalories} cal</p>
+          <p className="recipe-calories"><span>Calories: </span>{Math.floor(this.props.recipeCalories)} cal</p>
           <p className="recipe-link"><span>Recipe: </span><a href={this.props.recipeLink} target="_blank" rel="noopener noreferrer">CLICK ME</a></p>
         </div>
       </div>
