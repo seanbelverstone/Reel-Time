@@ -2,7 +2,7 @@
 import axios from "axios";
 
 var allCookies = document.cookie.split(";");
-var userToken = allCookies[2].split("=");
+var userToken = allCookies[3].split("=");
 var userTokenValue = userToken[1];
 
 export default {
@@ -35,7 +35,6 @@ export default {
     },
 
     searchRecipe: function(recipe) {
-        console.log(userTokenValue)
         return axios.get(`/api/recipe/${recipe}`, { 
             headers: {
                 'Authorization': `Bearer ${userTokenValue}`}})
