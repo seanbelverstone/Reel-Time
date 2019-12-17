@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A date night generator",
   "engines": {
-    "node": "v11.13.0"
+    "node": "v13.3.0"
   },
   "main": "server.js",
   "scripts": {

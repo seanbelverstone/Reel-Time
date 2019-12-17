@@ -62,6 +62,7 @@ class DashboardForm extends Component {
       .then(results => {
 
         recipeResults = results.data.hits;
+        console.log(recipeResults);
 
         var randomNumber = Math.floor(Math.random() * 9) +1;
 
