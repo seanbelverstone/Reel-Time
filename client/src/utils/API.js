@@ -2,7 +2,7 @@
 import axios from "axios";
 
 var allCookies = document.cookie.split(";");
-var userToken = allCookies[0].split("=");
+var userToken = allCookies[3].split("=");
 var userTokenValue = userToken[1];
 
 export default {
