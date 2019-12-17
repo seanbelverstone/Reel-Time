@@ -9,7 +9,7 @@ module.exports = {
     },
 
     recipeApi: (request, response) => {
-        axios.get(`https://api.edamam.com/search?q=\"${request.params.recipe} cuisine\"&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_API_KEY}`)
+        axios.get(`https://api.edamam.com/search?q="${request.params.recipe} cuisine"&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_API_KEY}`)
         .then(results => {
             response.json(results.data);
         });

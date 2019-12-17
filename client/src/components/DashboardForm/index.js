@@ -121,9 +121,9 @@ class DashboardForm extends Component {
               <option value="asian">Asian</option>
               <option value="british">British</option>
               <option value="caribbean">Caribbean</option>
-              <option value="central-europe">Central Europe</option>
+              <option value="central europe">Central Europe</option>
               <option value="chinese">Chinese</option>
-              <option value="eastern-europe">Eastern Europe</option>
+              <option value="eastern europe">Eastern Europe</option>
               <option value="french">French</option>
               <option value="indian">Indian</option>
               <option value="italian">Italian</option>
@@ -131,10 +131,10 @@ class DashboardForm extends Component {
               <option value="kosher">Kosher</option>
               <option value="mediterranean">Mediterranean</option>
               <option value="mexican">Mexican</option>
-              <option value="middle-eastern">Middle Eastern</option>
+              <option value="middle eastern">Middle Eastern</option>
               <option value="nordic">Nordic</option>
-              <option value="south-american">South American</option>
-              <option value="south-east-asian">South East Asian</option>
+              <option value="south american">South American</option>
+              <option value="south east asian">South East Asian</option>
 
             </select>
           </FormGroup>
