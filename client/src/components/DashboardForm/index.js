@@ -134,7 +134,7 @@ class DashboardForm extends Component {
               <option value="middle eastern">Middle Eastern</option>
               <option value="nordic">Nordic</option>
               <option value="south american">South American</option>
-              <option value="south east asian">South East Asian</option>
+              <option value="southeast asian">South East Asian</option>
 
             </select>
           </FormGroup>
