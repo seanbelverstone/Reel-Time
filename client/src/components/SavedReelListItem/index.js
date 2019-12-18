@@ -3,6 +3,7 @@ import "./style.css"
 import StarRating from "../StarRatingComponent";
 import ShareButton from "../ShareButton";
 import ReplayButton from "../ReplayButton";
+import moment from "moment";
 
 // RecipeList renders a bootstrap list item
 function SavedReelListItem (props) {
@@ -10,7 +11,7 @@ function SavedReelListItem (props) {
     return (
         <li>
             <div className="saved-content">
-                <p className="time-stamp">{`Watched: ${props.timestamp}`}</p>
+                <p className="time-stamp">{`Watched: ${moment(props.timestamp).format("LLLL")}`}</p>
                 <div className="movie-content-container">
 
                     <img className="movie-image" src={props.movieImage} alt={props.movieTitle}></img>
