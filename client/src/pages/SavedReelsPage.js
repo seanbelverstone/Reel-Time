@@ -27,12 +27,16 @@ class SavedReelPage extends Component {
   loadReels = () => {
     console.log("done")
     // this grabs the cookies and splits it to grab just the user's ID value
-    var allCookies = document.cookie.split(";");
-    var userId = allCookies[3].split("=");
-    var userIdValue = userId[1];
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+
+    var userId = getCookie("id");
     console.log(userId)
 
-    API.getReels(userIdValue)
+    API.getReels(userId)
       .then(results => {
           
         this.setState({reelResults: results.data});

@@ -42,10 +42,14 @@ class NewReelPage extends Component {
     handleButtonClick() {
         this.setState({isButtonClicked: true});
 
-        var allCookies = document.cookie.split(";");
-        var userId = allCookies[1].split("=");
-        var userIdValue = userId[1];
-        var userIdInt = parseInt(userIdValue);
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+          }
+
+        var userId = getCookie("id");
+        var userIdInt = parseInt(userId);
         
 
         var reelObj = { 
@@ -58,8 +62,6 @@ class NewReelPage extends Component {
             rating: 1,
             userId: userIdInt
         };
-
-        console.log(reelObj.userId);
 
         API.saveReel(reelObj.movieTitle, reelObj.movieImage, reelObj.movieSynopsis, reelObj.recipeTitle, reelObj.recipeImage, reelObj.recipeLink, reelObj.rating, reelObj.userId)
         .then(results => {
