@@ -30,6 +30,7 @@ class SavedReelPage extends Component {
     var allCookies = document.cookie.split(";");
     var userId = allCookies[1].split("=");
     var userIdValue = userId[1];
+    console.log(userId)
 
     API.getReels(userIdValue)
       .then(results => {
