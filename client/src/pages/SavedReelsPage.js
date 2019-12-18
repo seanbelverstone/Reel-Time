@@ -28,7 +28,7 @@ class SavedReelPage extends Component {
     console.log("done")
     // this grabs the cookies and splits it to grab just the user's ID value
     var allCookies = document.cookie.split(";");
-    var userId = allCookies[1].split("=");
+    var userId = allCookies[3].split("=");
     var userIdValue = userId[1];
     console.log(userId)
 
