@@ -1,9 +1,13 @@
 // API calls below.
 import axios from "axios";
 
-var allCookies = document.cookie.split(";");
-var userToken = allCookies[3].split("=");
-var userTokenValue = userToken[1];
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+
+  var userTokenValue = getCookie("token");
 
 export default {
 
