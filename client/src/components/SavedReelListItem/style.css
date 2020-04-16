@@ -68,3 +68,21 @@ ul .buttons {
     font-style: italic;
     font-weight: bolder;
 }
+
+#delete-button {
+    width: 120px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #a00000;
+    border: 0;
+    color: #ffffff;
+    margin-right: 30px;
+    border-radius: .25rem;
+  }
+
+  
+#delete-button:hover {
+    background-color: #a0000096;
+    font-weight: bolder;
+  }
+  
