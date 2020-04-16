@@ -23,5 +23,12 @@ This application will provide a user with a recommendation of a random recipe an
 - Passport.js
 - Express.js
 - Node.js
+
+### Contributors
+- Jihong Kim
+- Liz Guenthner
+- Quy Lai
+- Greg Gilpatrick
+- Sean Belverstone
  
 Live Heroku Link: [https://reel-time-app.herokuapp.com/]
