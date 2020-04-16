@@ -16,4 +16,12 @@ This application will provide a user with a recommendation of a random recipe an
  
 - 5. My Saved Reels - This page displays all of the user's saved Reels. They can rate or delete them based on how their experience was.
  
+ ### Technologies Used
+- React.js
+- MySQL
+- Sequelize
+- Passport.js
+- Express.js
+- Node.js
+ 
 Live Heroku Link: [https://reel-time-app.herokuapp.com/]
