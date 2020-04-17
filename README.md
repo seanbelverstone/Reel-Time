@@ -12,7 +12,7 @@ This application will provide a user with a recommendation of a random recipe an
  
 2. If new user, click the "New User" button to register with a username, email, and password.
  
- ![Create New User Page](./client/src/images/newreel.png)
+ ![Create New User Page](./client/src/images/signup.png)
 
 3. After login, the user can choose a movie genre and cuisine type then click 'Create Reel'. This will take the user to next page, displaying their results. Alternatively, from the dashboard, you can view your previously saved Reels by selecting the 'Saved Reels' button.
 
